@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pry - an IRB alternative and runtime developer console %></title>
+    <meta name="description" content="Pry is a powerful alternative to the standard IRB shell for Ruby.">
+    
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro&v1' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" tutle="Sunburst" href="http://yandex.st/highlightjs/6.0/styles/sunburst.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <nav>
+      <img src="pry_horizontal_red.png" alt="Pry Ruby Logo"/>
+      <br /><br />
+      <div id="infobox">
+        Pry is a <b>powerful</b> alternative to the standard IRB shell for Ruby.
+        It features <b>syntax highlighted code</b>, a flexible <b>plugin architecture</b>, <b>state navigation</b> and  <b>object inspection</b>.
+      </div>
+      <br /><br />
+      <a href="http://rdoc.info/github/banister/pry/master/file/README.markdown">Documentation</a>
+      <a href="#">Tutorials</a>
+      <a href="http://vimeo.com/23535249">Screencasts</a>
+    </nav>
+
+    <a href="http://github.com/banister/pry" rel="external nofollow"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://assets0.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_gray_6d6d6d.png&path=" alt="Fork me on GitHub"></a>
+
+    <article>
+    <h1>Quickstart</h1>
+      Install Pry:
+      <pre class="bash">
+      <code>$ gem install pry
+        $ pry
+      </code>
+      </pre>
+
+      Try it out:
+      <pre class="ruby">
+      <code>pry(main)> class Hello
+        pry(main)*   @x = 20
+        pry(main)* end
+        => 20
+        pry(main)> cd Hello
+        pry(Hello):1> ls -i
+        => [:@x]
+        pry(Hello):1> cd @x
+        pry(20:2)> self + 10
+        => 30
+        pry(20:2)> cd ..
+        pry(Hello):1> cd ..
+        pry(main)> cd ..
+      </code>
+      </pre>
+
+      <h1>Features</h1>
+      Pry is written from scratch to provide a number of advanced features, some of these include:
+
+      <ul>
+        <li>Source code browsing (including core C source with the pry-doc gem)</li>
+        <li>Documentation browsing</li>
+        <li>Live help system</li>
+        <li>Open methods in editors (edit-method Class#method)</li>
+        <li>Syntax highlighting</li>
+        <li>Command shell integration (start editors, run git, and rake from within Pry)</li>
+        <li>Gist integration</li>
+        <li>Navigation around state (cd, ls and friends)</li>
+        <li>Runtime invocation (use Pry as a developer console or debugger)</li>
+        <li>Exotic object support (BasicObject instances, IClasses, ...)</li>
+        <li>A Powerful and flexible command system</li>
+        <li>Ability to view and replay history</li>
+        <li>Many convenience commands inspired by IPython and other advanced REPLs</li>
+      </ul>
+
+      <p>
+      Pry also aims to be more than an IRB replacement; it is an attempt to bring REPL driven programming to the Ruby language. It is currently not nearly as powerful as tools like SLIME for lisp, but that is the general direction Pry is heading.
+      </p>
+
+      <p>
+      Pry is also fairly flexible and allows significant user customization. It is trivial to set it to read from any object that has a readline method and write to any object that has a puts method - many other aspects of Pry are also configurable making it a good choice for implementing custom shells.
+      </p>
+
+      <p>
+      Pry comes with an executable so it can be invoked at the command line. Just enter pry to start. A .pryrc file in the user's home directory will be loaded if it exists. Type pry --help at the command line for more information.
+      </p>
+
+      <h1>More examples</h1>
+      <h2>Runtime invocation</h2>
+      <p>
+      Pry can be invoked in the middle of a running program. It opens a Pry session at the point it's called and makes all program state at that point available. It can be invoked on any object using the my_object.pry syntax or on the
+      current binding (or any binding) using binding.pry. The Pry session will then begin within the scope of the object (or binding). When the session ends the program continues with any modifications you made to it.
+      </p>
+
+      <p>
+      This functionality can be used for such things as: debugging, implementing developer consoles and applying hot patches.
+      </p>
+
+      code:
+      <pre class="ruby">
+      <code># test.rb
+      require 'pry'
+
+      class A
+        def hello() puts "hello world!" end
+        end
+
+        a = A.new
+
+        # start a REPL session
+        binding.pry
+
+        # program resumes here (after pry session)
+        puts "program resumes here."
+      </code>
+      </pre>
+
+      Pry session:
+      <pre class="ruby">
+      <code>pry(main)> a.hello
+      hello world!
+      => nil
+      pry(main)> def a.goodbye
+      pry(main)*   puts "goodbye cruel world!"
+      pry(main)* end
+      => nil
+      pry(main)> a.goodbye
+      goodbye cruel world!
+      => nil
+      pry(main)> exit
+
+      # program resumes here.
+      </code></pre>
+
+      <h2>Command Shell Integration</h2>
+
+      <p>
+      A line of input that begins with a '.' will be forwarded to the command shell. This enables us to navigate the file system, spawn editors, and run git and rake directly from within Pry.
+      </p>
+
+      <p>
+      Further, we can use the shell-mode command to incorporate the present working directory into the Pry prompt and bring in (limited at this stage, sorry) file name completion. We can also interpolate Ruby code directly into
+      the shell by using the normal #{} string interpolation syntax.
+      </p>
+
+      <p>
+      In the code below we're going to switch to shell-mode and edit the .pryrc file in the home directory. We'll then cat its contents and reload the file.
+      </p>
+
+      <pre><code class="ruby">pry(main)> shell-mode
+      pry main:/home/john/ruby/projects/pry $ .cd ~
+      pry main:/home/john $ .emacsclient .pryrc
+      pry main:/home/john $ .cat .pryrc
+      def hello_world
+        puts "hello world!"
+        end
+      pry main:/home/john $ load ".pryrc"
+      => true
+      pry main:/home/john $ hello_world
+      hello world!
+      </code></pre>
+
+      </article>
+
+      <footer>
+        Pry comes to you from the wicked mind of <a href="https://github.com/banister">John Mair</a> who also brought you 
+        <a href="https://github.com/banister/texplay">TexPlay</a>,
+        <a href="https://github.com/banister/method_source">MethodSource</a>,
+        <a href="https://github.com/banister/devil">Devil</a>,
+        <a href="https://github.com/banister/remix">Remix</a> &amp;
+        <a href="https://github.com/banister/free">Free</a>.
+
+        <br /><br />
+        Remember, with great powers comes great responsibility!
+      </footer>
+
+    <script src="http://yandex.st/highlightjs/6.0/highlight.min.js"></script>
+    <script>
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad();
+    </script>
+
+  </body>
+</html>
