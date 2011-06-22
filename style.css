@@ -6,7 +6,7 @@ nav a {
   text-decoration: none;
   font: bold 13px verdana;
   padding: 5px 20px 5px 20px;
-  margin: 10px; 
+  margin: 10px;
   border-radius: 5px;
   border: 1px solid #eee;
   background: white;
@@ -17,18 +17,18 @@ nav a:visited { color: black; }
 nav a:hover { color: red; }
 
 h1,h2,h3 { padding: 0px; margin: 30px 0px 10px 0px; letter-spacing: 3px; }
-h1 { 
-  color: red; 
-  font: bold 40px 'Maven Pro', arial; 
-  border-bottom: solid 2px red; 
-  padding-bottom: 4px; 
+h1 {
+  color: red;
+  font: bold 40px 'Maven Pro', arial;
+  border-bottom: solid 2px red;
+  padding-bottom: 4px;
   text-shadow: 1px 1px 3px #111;
 }
 h2 { color: black; font: bold 25px 'Maven Pro', arial; text-shadow: 1px 1px 5px #888; }
 
 #infobox {
   font: 20px 'Maven Pro', arial;
-  background: #eee; 
+  background: #F2D8AC;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
@@ -44,7 +44,7 @@ footer {
   width: 760px;
   text-align: center;
   font: 11px verdana;
-  background: #dddddd; 
+  background: #dddddd;
   color: #555;
   border-radius: 5px;
 }
