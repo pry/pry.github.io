@@ -1,6 +1,6 @@
 html { }
 body { margin: 20px auto; width: 800px; font: 13px verdana; color: black; line-height: 140%; height: 100%; background: #FFF8E8; }
-nav { margin: 0px; display: block; width: 800px; margin: 0px auto 60px auto; text-align: center;}
+nav { margin: 0px; display: block; width: 800px; margin: 0px auto 10px auto; text-align: center;}
 nav a {
   color: black;
   text-decoration: none;

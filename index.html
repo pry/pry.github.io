@@ -35,20 +35,20 @@
     </nav>
 
 
-<!-- START MAIN CONTENT -->
 <!-- 
 
-  * Banister, edit within START/STOP MAIN CONTENT :p
+  * Banister, edit within START/STOP MAIN CONTENT
 
-  * Whitespaces and newlines works (cause of global <pre>-tag)
-    (This is also why the indention-flow stops here)
+  * All whitespaces and newlines count (cause of global <pre>-tag). Keep this in mind!
+    This is also why the indention-flow stops here.
 
-  * We dynamically strip out the first newline after <code>-tag
+  * We dynamically strip out the first newline after <code>-tag to have a perfect black box wrap the code.
 
 -->
 
-<article>
-<pre>
+  <article>
+  <pre> 
+<!-- START MAIN CONTENT -->
 <h1>Quickstart</h1>
 Install Pry:
 <code class="bash">
@@ -158,11 +158,10 @@ pry main:/home/john $ load ".pryrc"
 pry main:/home/john $ hello_world
 hello world!
 </code>
-
-</pre>
-</article>
 <!-- END MAIN CONTENT -->
 
+    </pre>
+    </article
 
     <footer>
       Pry comes to you from the wicked mind of <a href="https://github.com/banister">John Mair</a> who also brought you
