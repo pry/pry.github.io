@@ -1,0 +1,94 @@
+body {
+  margin: 20px auto;
+  width: 800px;
+  font: 13px verdana;
+  color: black;
+  line-height: 140%;
+  height: 100%;
+  background: #FFF8E8; }
+
+nav {
+  margin: 0px;
+  display: block;
+  width: 800px;
+  margin: 0px auto 10px auto;
+  text-align: center; }
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font: bold 13px verdana;
+  padding: 5px 20px 5px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  background: white;
+  -moz-box-shadow: 0px 0px 10px #555;
+  -webkit-box-shadow: 0px 0px 10px #555; }
+
+nav a:visited {
+  color: black; }
+
+nav a:hover {
+  color: red; }
+
+nav form {
+  text-align: right; }
+
+h1, h2, h3 {
+  padding: 0px;
+  margin: 10px 0px 0px 0px;
+  letter-spacing: 3px; }
+
+h1 {
+  color: red;
+  font: bold 40px 'Maven Pro', arial;
+  border-bottom: solid 2px red;
+  padding-bottom: 4px;
+  text-shadow: 1px 1px 3px #111; }
+
+h2 {
+  color: black;
+  font: bold 25px 'Maven Pro', arial;
+  text-shadow: 1px 1px 5px #888; }
+
+#infobox {
+  font: 20px 'Maven Pro', arial;
+  background: #F5F2ED;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  border: 1px #999 solid;
+  /*
+  -moz-box-shadow: 1px 1px 10px #555;
+  -webkit-box-shadow: 1px 1px 10px #555;
+  */ }
+
+footer {
+  margin: 70px 0px 10px 0px;
+  padding: 20px;
+  width: 760px;
+  text-align: center;
+  font: 11px verdana;
+  background: #dddddd;
+  color: #555;
+  border-radius: 5px; }
+
+footer a {
+  color: red; }
+
+img {
+  border: 0px; }
+
+pre {
+  margin: 0px;
+  padding: 0px;
+  white-space: pre-wrap;
+  font: 13px verdana; }
+
+code {
+  margin: 5px 0px;
+  border-radius: 5px; }
+
+ul {
+  white-space: normal; }

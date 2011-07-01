@@ -1,0 +1,12 @@
+# Ignored by GitHub:
+# - source: <your pages repo>
+# - destination: <the build dir>
+# - lsi: false
+# - pygments: true
+#
+
+# List of directories to exclude in Jekyll
+exclude: []
+
+# Custom data, available through {{ site.<variable> }}
+# none so far ^^
