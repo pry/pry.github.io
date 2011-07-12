@@ -1,0 +1,19 @@
+footer
+{
+  background: #EDE5CE;
+  color:      #333;
+  margin:     0 auto;
+  padding:    .5em;
+  text-align: center;
+
+  p { font: .7em 'Verdana', sans-serif; }
+  a
+  {
+    color: #900;
+    @include text-shadow(none);
+  }
+
+  border-top:    1px solid #988;
+  @include box-shadow(#333 0 4px 5px -4px inset);
+  @include text-shadow(white 0 1px);
+}

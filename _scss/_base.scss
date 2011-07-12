@@ -1,0 +1,79 @@
+@import "compass";
+@import "compass/css3";
+
+// Normalization (adapted from https://github.com/necolas/normalize.css)
+// - - - - - - - - - - - - - - - - - - - - - - - -
+
+body
+{
+  font: 100.01%/1.25 'Verdana', 'Arial', sans-serif;
+  margin: 0;
+}
+
+// HTML5 fix for IE6-9 & FF3
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section
+{
+    display: block;
+}
+
+// Blocks
+form { margin: 0; }
+dd { margin: 0 0 0 2.5em }
+blockquote { margin: 1em 2.5em }
+nav ol, nav ul { list-style: none; }
+
+// Inlines
+a:hover { text-decoration: none }
+a:hover, a:active { outline: 0 }
+strong { font-weight: bold } // Fix for FF3/4 Safari4/5 Chrome
+small { font-size: .75em } // Consistency
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+abbr[title] { border-bottom: 1px dotted } // IE7-9 & Chrome
+
+//
+img
+{
+  border: 0; // IE6/7/8/9
+  -ms-interpolation-mode: bicubic; // IE7
+}
+
+// S5 & Chrome
+pre, code
+{
+  font-family: monospace, monospace;
+  font-size: 1em;
+
+  // All
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+// IE6/7
+q
+{
+  quotes: none;
+
+  // S4
+  &:before, &:after
+  {
+    content: '';
+    content: none;
+  }
+}
+
+sub, sup
+{
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+ul, ol
+{
+  margin: 1em 0;
+  padding: 0 0 0 2.5em;
+}

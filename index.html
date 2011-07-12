@@ -1,192 +1,177 @@
+---
+# Jekyll wants this YAML front matter to parse the document.
+---
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+
     <title>Pry - an IRB alternative and runtime developer console</title>
     <meta name="description" content="Pry is a powerful alternative to the standard IRB shell for Ruby.">
 
-    <link href='http://fonts.googleapis.com/css?family=Maven+Pro&v1' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" tutle="Sunburst" href="http://yandex.st/highlightjs/6.0/styles/sunburst.min.css">
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link href="http://fonts.googleapis.com/css?family=Maven+Pro&v1" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/highlight.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
-
   <body>
-
-    <a href="http://github.com/pry/pry" rel="external nofollow"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://assets0.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_gray_6d6d6d.png&path=" alt="Fork me on GitHub"></a>
-
-    <nav>
-      <img src="pry_horizontal_red.png" alt="Pry Ruby Logo"/>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-      <input type="hidden" name="cmd" value="_s-xclick">
-      <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-      ">
-      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-      </form>
-      <br /><br />
-      <div id="infobox">
-        Pry is a <b>powerful</b> alternative to the standard IRB shell for Ruby.
-        It features <b>syntax highlighting</b>, a flexible <b>plugin
-        architecture</b>, <b>runtime invocation</b> and  <b>source and
-        documentation browsing</b>.
+    <div class="wrap">
+      <div class="fork_me ribbon">
+        <a href="http://github.com/pry/pry" rel="external"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://assets0.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_gray_6d6d6d.png&path=" alt="Fork me on GitHub"></a>
       </div>
-      <br /><br />
-      <a href="http://rdoc.info/github/banister/pry/master/file/README.markdown">Documentation</a>
-      <a href="https://github.com/pry/pry/wiki">Tutorials</a>
-      <a href="http://vimeo.com/23535249">Screencasts</a>
-    </nav>
 
+      <header>
+      <div id="logo"><img src="pry_horizontal_red.png" alt="Pry Ruby Logo"/></div>
 
-<!-- 
+      <form class="paypal donate" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAPjck718BrrLm3pC4/wrjVtWnFmhowWnrkiEtgmCEODIOFf5ggt4th07tXBRkGVB7PoneRyI/iVR7lnBdSHRc7fud7LvoMZB0VBDZGtBl1AEVyj0a9FuW+1VYe2lK4KXV+YRwpgiw5mwvI22LFxndvASw0HpEFc8aD62R3mpJfozELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQItkMMttln2ZWAgZAyNKfA5OF9YLYdrqYYvj8VWtyH1Ry0YLEMwWQ+qePHYb2+PCJTtt95UvRH3sXhrb7k7MaDrffH/24UoNCqZmJJgY7obOtqlZQcEXK3otJpOeew+ilnFg2kZzqsVGIAwD9FoiqgaztvIYwaN92wIL0j8yAFYQr6H4W2WqX05RkXqhnNqXlGcplVbCZQT5wJhM2gggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMTA2MjMwNzAxMDJaMCMGCSqGSIb3DQEJBDEWBBSF5pZEHybWMWz5+U+WQiZwUYxgbzANBgkqhkiG9w0BAQEFAASBgLgHEWQqsM7Fe3BTnI0B0cEOSX43TOCOR+emtRFAOgvw/gFuogdR6e9UViCmCEwXkz3DvrsQvspXWlagp6Xdt88M9foW7fkbJxEitEcVfp5s7oy3k2WT9jlXV678PtH47OHSNuNFtXBTG7vCZJHlknIhDOqRN+ghO3S3O6w06g9i-----END PKCS7-----">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+      </form>
 
-  * Banister, edit within START/STOP MAIN CONTENT
+      <p class="infobox">
+        Pry is a <em>powerful</em> alternative to the standard IRB shell for
+        Ruby.  It features <em>syntax highlighting</em>, a flexible <em>plugin
+          architecture</em>, <em>runtime invocation</em> and  <em>source and
+          documentation browsing</em>.
+      </p>
 
-  * All whitespaces and newlines count (cause of global <pre>-tag). Keep this in mind!
-    This is also why the indention-flow stops here.
+      <nav>
+      <ul>
+        <li>
+          <a href="http://rdoc.info/github/banister/pry/master/file/README.markdown">Documentation</a>
+        </li>
+        <li>
+          <a href="https://github.com/pry/pry/wiki">Tutorials</a>
+        </li>
+        <li>
+          <a href="http://vimeo.com/23535249">Screencasts</a>
+        </li>
+      </ul>
+      </nav>
+      </header>
 
-  * We dynamically strip out the first newline after <code>-tag to have a perfect black box wrap the code.
+      <article>
+      <h1>Quickstart</h1>
 
--->
+      <h2>Install Pry</h2>
+      {% highlight bash %}{% include code/install.sh %}{% endhighlight %}
 
-  <article>
-  <pre> 
-<!-- START MAIN CONTENT -->
-<h1>Quickstart</h1>
-Install Pry:
-<code class="bash">
-$ gem install pry
-$ pry
-</code>
+      <h2>Try it out</h2>
+      {% highlight ruby %}{% include code/tryout.rb %}{% endhighlight %}
+      </article>
 
-Try it out:
-<code class="ruby">
-pry(main)> class Hello
-pry(main)*   @x = 20
-pry(main)* end
-=> 20
-pry(main)> cd Hello
-pry(Hello):1> ls -i
-=> [:@x]
-pry(Hello):1> cd @x
-pry(20:2)> self + 10
-=> 30
-pry(20:2)> cd ..
-pry(Hello):1> cd ..
-pry(main)> cd ..
-</code>
+      <article>
+      <h1>Features</h1>
+      <p>
+        Pry is written from scratch to provide a number of advanced features,
+        some of these include:
+      </p>
 
-<h1>Features</h1>
-Pry is written from scratch to provide a number of advanced features, some of these include:
+      <ul>
+        <li>Source code browsing (including core C source with the pry-doc gem)</li>
+        <li>Rubinius core source browing</li>
+        <li>Documentation browsing</li>
+        <li>Live help system</li>
+        <li>Open methods in editors (edit-method Class#method)</li>
+        <li>Syntax highlighting</li>
+        <li>Command shell integration (start editors, run git, and rake from within Pry)</li>
+        <li>Gist integration</li>
+        <li>Navigation around state (cd, ls and friends)</li>
+        <li>Runtime invocation (use Pry as a developer console or debugger)</li>
+        <li>Exotic object support (BasicObject instances, IClasses, ...)</li>
+        <li>A Powerful and flexible command system</li>
+        <li>Ability to view and replay history</li>
+        <li>Many convenience commands inspired by IPython and other advanced REPLs</li>
+      </ul>
 
-<ul>
-  <li>Source code browsing (including core C source with the pry-doc gem)</li>
-  <li>Rubinius core source browing</li>
-  <li>Documentation browsing</li>
-  <li>Live help system</li>
-  <li>Open methods in editors (edit-method Class#method)</li>
-  <li>Syntax highlighting</li>
-  <li>Command shell integration (start editors, run git, and rake from within Pry)</li>
-  <li>Gist integration</li>
-  <li>Navigation around state (cd, ls and friends)</li>
-  <li>Runtime invocation (use Pry as a developer console or debugger)</li>
-  <li>Exotic object support (BasicObject instances, IClasses, ...)</li>
-  <li>A Powerful and flexible command system</li>
-  <li>Ability to view and replay history</li>
-  <li>Many convenience commands inspired by IPython and other advanced REPLs</li>
-</ul>
-Pry also aims to be more than an IRB replacement; it is an attempt to bring REPL driven programming to the Ruby language. It is currently not nearly as powerful as tools like SLIME for lisp, but that is the general direction Pry is heading.
-      
-Pry is also fairly flexible and allows significant user customization. It is trivial to set it to read from any object that has a readline method and write to any object that has a puts method - many other aspects of Pry are also configurable making it a good choice for implementing custom shells.
-      
-Pry comes with an executable so it can be invoked at the command line. Just enter pry to start. A .pryrc file in the user's home directory will be loaded if it exists. Type pry --help at the command line for more information.
-<h1>More examples</h1>
-<h2>Runtime invocation</h2>
-Pry can be invoked in the middle of a running program. It opens a Pry session at the point it's called and makes all program state at that point available. It can be invoked on any object using the my_object.pry syntax or on the current binding (or any binding) using binding.pry. The Pry session will then begin within the scope of the object (or binding). When the session ends the program continues with any modifications you made to it.
-     
-This functionality can be used for such things as: debugging, implementing developer consoles and applying hot patches.
+      <p>
+        Pry also aims to be more than an IRB replacement; it is an attempt to
+        bring REPL driven programming to the Ruby language. It is currently not
+        nearly as powerful as tools like SLIME for lisp, but that is the general
+        direction Pry is heading.
+      </p>
 
-code:
-<code class="ruby">
-# test.rb
-require 'pry'
+      <p>
+        Pry is also fairly flexible and allows significant user customization. It
+        is trivial to set it to read from any object that has a readline method
+        and write to any object that has a puts method - many other aspects of
+        Pry are also configurable making it a good choice for implementing custom
+        shells.
+      </p>
 
-class A
-  def hello() puts "hello world!" end
-end
+      <p>
+        Pry comes with an executable so it can be invoked at the command line.
+        Just enter pry to start. A .pryrc file in the user's home directory will
+        be loaded if it exists. Type pry --help at the command line for more
+        information.
+      </p>
+      </article>
 
-a = A.new
+      <article>
+      <h1>More examples</h1>
 
-# start a REPL session
-binding.pry
+      <h2>Runtime invocation</h2>
+      <p>
+        Pry can be invoked in the middle of a running program. It opens a Pry
+        session at the point it's called and makes all program state at that
+        point available. It can be invoked on any object using the my_object.pry
+        syntax or on the current binding (or any binding) using binding.pry. The
+        Pry session will then begin within the scope of the object (or binding).
+        When the session ends the program continues with any modifications you
+        made to it.
+      </p>
 
-# program resumes here (after pry session)
-puts "program resumes here."
-</code>
+      <p>
+        This functionality can be used for such things as: debugging,
+        implementing developer consoles and applying hot patches.
+      </p>
 
-Pry session:
-<code class="ruby">
-pry(main)> a.hello
-hello world!
-=> nil
-pry(main)> def a.goodbye
-pry(main)*   puts "goodbye cruel world!"
-pry(main)* end
-=> nil
-pry(main)> a.goodbye
-goodbye cruel world!
-=> nil
-pry(main)> exit
+      {% highlight ruby %}{% include code/runtime.rb %}{% endhighlight %}
 
-# program resumes here.
-</code>
+      <p>
+        Pry session:
+      </p>
 
-<h2>Command Shell Integration</h2>
-A line of input that begins with a '.' will be forwarded to the command shell. This enables us to navigate the file system, spawn editors, and run git and rake directly from within Pry.
-      
-Further, we can use the shell-mode command to incorporate the present working directory into the Pry prompt and bring in (limited at this stage, sorry) file name completion. We can also interpolate Ruby code directly into the shell by using the normal #{} string interpolation syntax.
-      
-In the code below we're going to switch to shell-mode and edit the .pryrc file in the home directory. We'll then cat its contents and reload the file.
+      {% highlight ruby %}{% include code/session.rb %}{% endhighlight %}
 
-<code class="ruby">
-pry(main)> shell-mode
-pry main:/home/john/ruby/projects/pry $ .cd ~
-pry main:/home/john $ .emacsclient .pryrc
-pry main:/home/john $ .cat .pryrc
-def hello_world
-  puts "hello world!"
-end
-pry main:/home/john $ load ".pryrc"
-=> true
-pry main:/home/john $ hello_world
-hello world!
-</code>
-<!-- END MAIN CONTENT -->
+      <h2>Command Shell Integration</h2>
+      <p>
+        A line of input that begins with a '.' will be forwarded to the command
+        shell. This enables us to navigate the file system, spawn editors, and
+        run git and rake directly from within Pry.
+      </p>
 
-    </pre>
-    </article>
+      <p>
+        Further, we can use the shell-mode command to incorporate the present
+        working directory into the Pry prompt and bring in (limited at this
+        stage, sorry) file name completion. We can also interpolate Ruby code
+        directly into the shell by using the normal #{} string interpolation
+        syntax.
+      </p>
+
+      <p>
+        In the code below we're going to switch to shell-mode and edit the .pryrc
+        file in the home directory. We'll then cat its contents and reload the
+        file.
+      </p>
+
+      {% highlight ruby %}{% include code/pyrc.rb %}{% endhighlight %}
+      </article>
+    </div>
 
     <footer>
-      Pry comes to you from the wicked mind of <a href="https://github.com/banister">John Mair</a> who also brought you
-      <a href="https://github.com/banister/texplay">TexPlay</a>,
-      <a href="https://github.com/banister/method_source">MethodSource</a>,
-      <a href="https://github.com/banister/devil">Devil</a>,
-      <a href="https://github.com/banister/remix">Remix</a> &amp;
-      <a href="https://github.com/banister/free">Free</a>.
+      <p>
+        Pry comes to you from the wicked mind of <a href="https://github.com/banister">John Mair</a> who also brought you
+        <a href="https://github.com/banister/texplay">TexPlay</a>,
+        <a href="https://github.com/banister/method_source">MethodSource</a>,
+        <a href="https://github.com/banister/devil">Devil</a>,
+        <a href="https://github.com/banister/remix">Remix</a> &amp;
+        <a href="https://github.com/banister/free">Free</a>.
+      </p>
 
-      <br /><br />
-      Remember, with great powers comes great responsibility!
+      <p>
+        Remember, with great powers comes great responsibility!
+      </p>
     </footer>
-
-    <script src="http://yandex.st/highlightjs/6.0/highlight.min.js"></script>
-    <script>
-      function $(selector){
-        var elements = Array.prototype.slice.call( document.querySelectorAll(selector) )
-        var items = selector.split(" ")
-        return (items[items.length-1][0] == "#") ? elements[0] : elements // Return single element if fetching a
-      }
-      $("code").forEach( function(tag) {
-        tag.innerHTML = tag.innerHTML.replace(/^\n/, "")
-        hljs.highlightBlock(tag, '    ');
-      });
-    </script>
-
   </body>
 </html>
