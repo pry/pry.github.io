@@ -1,23 +1,25 @@
 h1, h2, h3
 {
-  padding: 0;
   margin: .6em 0 0;
   letter-spacing: 3px;
+  padding: 0;
 }
 
 h1
 {
-  color: red;
-  font: bold 40px 'Maven Pro', arial;
-  border-bottom: solid 2px red;
-  padding-bottom: 4px;
-  text-shadow: 1px 1px 3px #111;
+  border-bottom: solid 2px;
+  color: #D00;
+  font: bold 2.5em 'Maven Pro', 'Arial';
+  padding-bottom: .15em;
+
+  @include text-shadow(#111 1px 1px 3px);
 }
 
 h2
 {
   color: black;
-  font: bold 25px 'Maven Pro', arial;
-  text-shadow: 1px 1px 5px #888;
+  font: bold 1.5em 'Maven Pro', 'Arial';
+  margin-top: 1.25em;
+  @include text-shadow(#888 0 1px 3px);
 }
 
