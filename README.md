@@ -28,12 +28,12 @@ have installed dependencies with Bundler, is to start Foreman:
 That should be it! Now you can change files wildly and you’ll see
 them by pointing your browser to `http://localhost:5000`.
 
-### [Compass](http://compass-style.org/)
+#### [Compass](http://compass-style.org/)
 Compass is used to ease the pain of CSS. Compass will find all
 files in the `_scss/` directory ending with `.scss`, and compile
 them into the `stylesheets` directory.
 
-### [Jekyll](http://jekyllrb.com/)
+#### [Jekyll](http://jekyllrb.com/)
 GitHub Pages are powered by Jekyll, and so are we! Configuration
 is in `_config.yml` as normal, but it probably doesn’t need to
 be touched.
