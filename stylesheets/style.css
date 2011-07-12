@@ -92,8 +92,10 @@ header .paypal.donate {
   position: relative;
   overflow: hidden;
   *zoom: 1; }
-  header .paypal.donate input {
+  header .paypal.donate p {
     float: right; }
+  header .paypal.donate p input {
+    vertical-align: middle; }
 header .infobox {
   background: #F5F2ED;
   border: 1px #999 solid;
