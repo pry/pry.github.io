@@ -30,12 +30,12 @@
       </div>
       <br /><br />
       <a href="http://rdoc.info/github/banister/pry/master/file/README.markdown">Documentation</a>
-      <a href="https://github.com/pry/pry/wiki">Tutorials</a>
+      <a href="https://github.com/pry/pry/wiki">Wiki</a>
       <a href="http://vimeo.com/23535249">Screencasts</a>
     </nav>
 
 
-<!-- 
+<!--
 
   * Banister, edit within START/STOP MAIN CONTENT
 
@@ -47,7 +47,7 @@
 -->
 
   <article>
-  <pre> 
+  <pre>
 <!-- START MAIN CONTENT -->
 <h1>Quickstart</h1>
 Install Pry:
@@ -58,19 +58,21 @@ $ pry
 
 Try it out:
 <code class="ruby">
-pry(main)> class Hello
-pry(main)*   @x = 20
-pry(main)* end
-=> 20
-pry(main)> cd Hello
-pry(Hello):1> ls -i
-=> [:@x]
-pry(Hello):1> cd @x
-pry(20:2)> self + 10
-=> 30
-pry(20:2)> cd ..
-pry(Hello):1> cd ..
-pry(main)> cd ..
+pry(main)> require 'grit'
+=> true
+pry(main)> cd Grit
+pry(Grit):1> ls -M Blame
+[:lines, :load_blame, :process_raw_blame]
+pry(Grit):1> show-method Blame#load_blame
+
+From: /Users/john/.rvm/gems/ruby-1.9.2-p180/gems/grit-2.4.1/lib/grit/blame.rb @ line 15:
+Number of lines: 4
+
+def load_blame
+  output = @repo.git.blame({'p' => true}, @commit, '--', @file)
+  process_raw_blame(output)
+end
+pry(Grit):1>
 </code>
 
 <h1>Features</h1>
@@ -93,14 +95,13 @@ Pry is written from scratch to provide a number of advanced features, some of th
   <li>Many convenience commands inspired by IPython and other advanced REPLs</li>
 </ul>
 Pry also aims to be more than an IRB replacement; it is an attempt to bring REPL driven programming to the Ruby language. It is currently not nearly as powerful as tools like SLIME for lisp, but that is the general direction Pry is heading.
-      
-Pry is also fairly flexible and allows significant user customization. It is trivial to set it to read from any object that has a readline method and write to any object that has a puts method - many other aspects of Pry are also configurable making it a good choice for implementing custom shells.
-      
-Pry comes with an executable so it can be invoked at the command line. Just enter pry to start. A .pryrc file in the user's home directory will be loaded if it exists. Type pry --help at the command line for more information.
+
+Pry is also fairly flexible and allows significant user customization making it a good choice for implementing custom shells.
+
 <h1>More examples</h1>
 <h2>Runtime invocation</h2>
-Pry can be invoked in the middle of a running program. It opens a Pry session at the point it's called and makes all program state at that point available. It can be invoked on any object using the my_object.pry syntax or on the current binding (or any binding) using binding.pry. The Pry session will then begin within the scope of the object (or binding). When the session ends the program continues with any modifications you made to it.
-     
+Pry can be invoked in the middle of a running program. It opens a Pry session at the point it's called and makes all program state at that point available. When the session ends the program continues with any modifications you made to it.
+
 This functionality can be used for such things as: debugging, implementing developer consoles and applying hot patches.
 
 code:
@@ -140,10 +141,8 @@ pry(main)> exit
 
 <h2>Command Shell Integration</h2>
 A line of input that begins with a '.' will be forwarded to the command shell. This enables us to navigate the file system, spawn editors, and run git and rake directly from within Pry.
-      
-Further, we can use the shell-mode command to incorporate the present working directory into the Pry prompt and bring in (limited at this stage, sorry) file name completion. We can also interpolate Ruby code directly into the shell by using the normal #{} string interpolation syntax.
-      
-In the code below we're going to switch to shell-mode and edit the .pryrc file in the home directory. We'll then cat its contents and reload the file.
+
+Further, we can use the shell-mode command to incorporate the present working directory into the Pry prompt and bring file name completion. We can also interpolate Ruby code directly into the shell by using the normal #{} string interpolation syntax.
 
 <code class="ruby">
 pry(main)> shell-mode
