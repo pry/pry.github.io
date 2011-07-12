@@ -10,7 +10,7 @@
     <meta name="description" content="Pry is a powerful alternative to the standard IRB shell for Ruby.">
 
     <link href="http://fonts.googleapis.com/css?family=Maven+Pro&v1" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/stylesheets/highlight.css">
+    <link rel="stylesheet" tutle="Sunburst" href="http://yandex.st/highlightjs/6.0/styles/sunburst.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
@@ -118,6 +118,7 @@
         <p>
           Pry session:
         </p>
+
         {% highlight ruby %}{% include code/session.rb %}{% endhighlight %}
 
         <h2>Command Shell Integration</h2>
@@ -156,6 +157,19 @@
       <p>
         Remember, with great powers comes great responsibility!
       </p>
-    </footer>
+      </footer>
+
+      <script src="http://yandex.st/highlightjs/6.0/highlight.min.js"></script>
+      <script>
+        function $(selector){
+          var elements = Array.prototype.slice.call( document.querySelectorAll(selector) )
+          var items = selector.split(" ")
+          return (items[items.length-1][0] == "#") ? elements[0] : elements // Return single element if fetching a
+        }
+        $("code").forEach( function(tag) {
+          tag.innerHTML = tag.innerHTML.replace(/^\n/, "")
+          hljs.highlightBlock(tag, '    ');
+        });
+      </script>
   </body>
 </html>
