@@ -115,17 +115,23 @@ end
 
 a = A.new
 
+# set x to 10
+x = 10
+
 # start a REPL session
 binding.pry
 
 # program resumes here (after pry session)
-puts "program resumes here."
+puts "program resumes here. Value of x is: #{x}."
 </code>
 
 Pry session:
 <code class="ruby">
 pry(main)> a.hello
 hello world!
+=> nil
+pry(main)> puts x
+10
 => nil
 pry(main)> def a.goodbye
 pry(main)*   puts "goodbye cruel world!"
@@ -134,9 +140,10 @@ pry(main)* end
 pry(main)> a.goodbye
 goodbye cruel world!
 => nil
+pry(main)> x = "changed"
 pry(main)> exit
 
-# program resumes here.
+# OUTPUT: program resumes here Value of x is: changed.
 </code>
 
 <h2>Command Shell Integration</h2>
