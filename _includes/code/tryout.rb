@@ -1,15 +1,16 @@
-pry(main)> require 'grit'
+pry(main)> require 'pathname'
 => true
-pry(main)> cd Grit
-pry(Grit)> ls -M Blame
-[:lines, :load_blame, :process_raw_blame]
-pry(Grit)> show-method Blame#load_blame
+pry(main)> cd Pathname
+pry(Pathname):1> show-method unlink
 
-From: /Users/john/.rvm/gems/ruby-1.9.2-p180/gems/grit-2.4.1/lib/grit/blame.rb @ line 15:
-Number of lines: 4
+From: /Users/john/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/pathname.rb @ line 1031:
+Number of lines: 7
 
-def load_blame
-  output = @repo.git.blame({'p' => true}, @commit, '--', @file)
-  process_raw_blame(output)
+def unlink()
+  begin
+    Dir.unlink @path
+  rescue Errno::ENOTDIR
+    File.unlink @path
+  end
 end
-pry(Grit)>
+pry(Pathname):1>
