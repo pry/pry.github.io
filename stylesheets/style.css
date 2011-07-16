@@ -112,49 +112,50 @@ header .infobox {
   header .infobox em {
     font-style: normal;
     font-weight: bold; }
+
 nav {
   display: block;
   margin: 2em auto;
   overflow: hidden;
   *zoom: 1; }
-  header nav ul {
-    margin: 0;
-    padding: 0;
-    text-align: center; }
-    header nav ul li, header nav ul li a {
-      display: -moz-inline-box;
-      -moz-box-orient: vertical;
-      display: inline-block;
-      vertical-align: middle;
-      *vertical-align: auto; }
-      header nav ul li, header nav ul li a {
-        *display: inline; }
-    header nav ul li a {
-      background: white;
-      border: 1px solid #eee;
-      font: bold .8em 'Verdana', sans-serif;
-      margin: .4em 1em;
-      padding: .4em 1.2em;
-      text-decoration: none;
-      -moz-box-shadow: #555555 1px 1px 5px;
-      -webkit-box-shadow: #555555 1px 1px 5px;
-      -o-box-shadow: #555555 1px 1px 5px;
-      box-shadow: #555555 1px 1px 5px;
-      -moz-border-radius: 4px;
-      -webkit-border-radius: 4px;
-      -o-border-radius: 4px;
-      -ms-border-radius: 4px;
-      -khtml-border-radius: 4px;
-      border-radius: 4px;
-      color: black; }
-      header nav ul li a:visited {
-        color: black; }
-      header nav ul li a:focus {
-        color: black; }
-      header nav ul li a:hover {
-        color: red; }
-      header nav ul li a:active {
-        color: black; }
+nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+nav ul li, nav ul li a {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto; }
+nav ul li, nav ul li a {
+  *display: inline; }
+nav ul li a {
+  background: white;
+  border: 1px solid #eee;
+  font: bold .8em 'Verdana', sans-serif;
+  margin: .4em 1em;
+  padding: .4em 1.2em;
+  text-decoration: none;
+  -moz-box-shadow: #555555 1px 1px 5px;
+  -webkit-box-shadow: #555555 1px 1px 5px;
+  -o-box-shadow: #555555 1px 1px 5px;
+  box-shadow: #555555 1px 1px 5px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  color: black; }
+nav ul li a:visited {
+  color: black; }
+nav ul li a:focus {
+  color: black; }
+nav ul li a:hover {
+  color: red; }
+nav ul li a:active {
+  color: black; }
 
 footer {
   background: #EDE5CE;
