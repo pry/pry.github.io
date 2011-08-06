@@ -76,13 +76,13 @@ h1 {
   color: #D00;
   font: bold 2.5em 'Maven Pro', 'Arial';
   padding-bottom: .15em;
-  text-shadow: #111111 1px 1px 3px; }
+  text-shadow: #111111 0px 1px 1px; }
 
 h2 {
   color: black;
   font: bold 1.5em 'Maven Pro', 'Arial';
   margin-top: 1.25em;
-  text-shadow: #888888 0 1px 3px; }
+  text-shadow: #888888 0 1px 2px; }
 
 header #logo {
   padding: 2em 0;
