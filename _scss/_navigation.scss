@@ -13,12 +13,23 @@ nav
 
     li a
     {
-      background: white;
-      border: 1px solid #eee;
+      background: #4E565D;
+      background-image: -webkit-gradient(
+        linear, left bottom, left top,
+        color-stop(0.09, rgb(26,31,36)),
+        color-stop(0.39, rgb(48,57,66))
+      );
+      background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(26,31,36) 9%,
+        rgb(48,57,66) 39%
+      );
+      border: 1px solid #353C3F;
       font: bold .8em 'Verdana', sans-serif;
       margin: .4em 1em;
-      padding: .4em 1.2em;
+      padding: .6em 1.2em;
       text-decoration: none;
+      color: white;
 
       @include box-shadow(#555 1px 1px 5px);
       @include border-radius(4px);
