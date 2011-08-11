@@ -14,16 +14,7 @@ nav
     li a
     {
       background: #4E565D;
-      background-image: -webkit-gradient(
-        linear, left bottom, left top,
-        color-stop(0.09, rgb(26,31,36)),
-        color-stop(0.39, rgb(48,57,66))
-      );
-      background-image: -moz-linear-gradient(
-        center bottom,
-        rgb(26,31,36) 9%,
-        rgb(48,57,66) 39%
-      );
+      @include background-image(linear-gradient(bottom center, rgb(26, 31, 36) 9%, rgb(48, 57, 66) 39%));
       border: 1px solid #353C3F;
       font: bold .8em 'Verdana', sans-serif;
       margin: .4em 1em;
@@ -33,9 +24,8 @@ nav
 
       @include box-shadow(#555 1px 1px 5px);
       @include border-radius(4px);
-
-      &:visited, &:focus, &:active { color: white; }
-      &:hover { color: red; }
+      // http://compass-style.org/reference/compass/typography/links/link_colors/#mixin-link-colors
+      @include link-colors(white, red, white, white, white);
     }
   }
 }
