@@ -33,7 +33,9 @@ nav
 
       @include box-shadow(#555 1px 1px 5px);
       @include border-radius(4px);
-      @include link-colors(black, red, black, black, black);
+
+      &:visited, &:focus, &:active { color: white; }
+      &:hover { color: red; }
     }
   }
 }
