@@ -26,6 +26,7 @@ nav
       @include border-radius(4px);
       // http://compass-style.org/reference/compass/typography/links/link_colors/#mixin-link-colors
       @include link-colors(white, red, white, white, white);
+      @include text-shadow(black 0 0 8px);
     }
   }
 }

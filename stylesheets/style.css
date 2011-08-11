@@ -154,7 +154,8 @@ nav {
       -ms-border-radius: 4px;
       -khtml-border-radius: 4px;
       border-radius: 4px;
-      color: white; }
+      color: white;
+      text-shadow: black 0 0 8px; }
       nav ul li a:visited {
         color: white; }
       nav ul li a:focus {
