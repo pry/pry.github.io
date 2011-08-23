@@ -6,12 +6,16 @@ header
     text-align: center;
   }
 
-  .paypal.donate
+  .donate
   {
-    p { float: right }
-    p input { vertical-align: middle }
-    top: -2em;
-    position: relative;
+    a
+    {
+      display: block;
+      float: right;
+    }
+    img { border: 0 }
+
+    margin: 0 0 1em;
     @include clearfix;
   }
 

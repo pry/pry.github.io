@@ -87,15 +87,15 @@ h2 {
 header #logo {
   padding: 2em 0;
   text-align: center; }
-header .paypal.donate {
-  top: -2em;
-  position: relative;
+header .donate {
+  margin: 0 0 1em;
   overflow: hidden;
   *zoom: 1; }
-  header .paypal.donate p {
+  header .donate a {
+    display: block;
     float: right; }
-  header .paypal.donate p input {
-    vertical-align: middle; }
+  header .donate img {
+    border: 0; }
 header .infobox {
   background: #F5F2ED;
   border: 1px #999 solid;
