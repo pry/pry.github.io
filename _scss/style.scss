@@ -27,3 +27,16 @@ pre
   @include border-radius(2px);
   code { line-height: 1.2em }
 }
+
+.donate
+{
+  a
+  {
+    display: block;
+    float: right;
+  }
+  img { border: 0 }
+
+  margin: 1em 0 1em;
+  @include clearfix;
+}

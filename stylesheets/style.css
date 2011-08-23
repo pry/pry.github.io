@@ -85,17 +85,8 @@ h2 {
   text-shadow: #888888 0 1px 2px; }
 
 header #logo {
-  padding: 2em 0;
+  padding: 2em 0 0;
   text-align: center; }
-header .donate {
-  margin: 0 0 1em;
-  overflow: hidden;
-  *zoom: 1; }
-  header .donate a {
-    display: block;
-    float: right; }
-  header .donate img {
-    border: 0; }
 header .infobox {
   background: #F5F2ED;
   border: 1px #999 solid;
@@ -204,3 +195,13 @@ pre {
   border-radius: 2px; }
   pre code {
     line-height: 1.2em; }
+
+.donate {
+  margin: 1em 0 1em;
+  overflow: hidden;
+  *zoom: 1; }
+  .donate a {
+    display: block;
+    float: right; }
+  .donate img {
+    border: 0; }

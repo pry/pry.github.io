@@ -2,21 +2,8 @@ header
 {
   #logo
   {
-    padding: 2em 0;
+    padding: 2em 0 0;
     text-align: center;
-  }
-
-  .donate
-  {
-    a
-    {
-      display: block;
-      float: right;
-    }
-    img { border: 0 }
-
-    margin: 0 0 1em;
-    @include clearfix;
   }
 
   .infobox
