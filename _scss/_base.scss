@@ -1,6 +1,10 @@
 @import "compass";
 @import "compass/css3";
 
+// Blueprint CSS Framework
+$blueprint-grid-width: 24; /* (24px + 10px) * 24 - 10px = 806px */
+@import "blueprint";
+
 // Normalization (adapted from https://github.com/necolas/normalize.css)
 // - - - - - - - - - - - - - - - - - - - - - - - -
 

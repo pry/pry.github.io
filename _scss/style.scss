@@ -7,14 +7,14 @@
 
 body
 {
-  background: #FFF8E8;
+  background: image-url('background.jpg') repeat;
   color: black;
 }
 
 div.wrap
 {
+  @include container;
   margin: 0 auto 2em;
-  width: 50em;
 }
 
 pre
@@ -28,15 +28,3 @@ pre
   code { line-height: 1.2em }
 }
 
-.donate
-{
-  a
-  {
-    display: block;
-    float: right;
-  }
-  img { border: 0 }
-
-  margin: 1em 0 1em;
-  @include clearfix;
-}

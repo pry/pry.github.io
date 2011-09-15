@@ -1,26 +1,88 @@
 header
 {
+  h1 { display: none }
+  @include container;
+
   #logo
   {
+    margin-bottom: 4em;
+    position: relative;
     padding: 2em 0 0;
     text-align: center;
   }
 
-  .infobox
+  .donate
   {
-    background: #F5F2ED;
-    border: 1px #999 solid;
-    font: 1.25em 'Maven Pro', 'Arial', sans-serif;
-    margin: 0 auto;
-    padding: .5em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    a { display: block; }
+    img { border: 0 }
+  }
+
+  .sponsors
+  {
     text-align: center;
 
-    @include border-radius(4px);
+    h2
+    {
+      background: image-url('/images/sponsored_by_header.png') no-repeat;
+      height: 28px;
+      margin: -6px 1em 0;
+      text-indent: -9999px;
+      width: 152px;
+    }
+
+    a
+    {
+      @include inline-block;
+      margin: 1em 0;
+    }
+
+    @include column(8);
+  }
+
+  .support
+  {
+    @include column(16, true);
+
+    h2
+    {
+      background: image-url('/images/support_pry_header.png') top left no-repeat;
+      font: 1.6em/1 'Arial';
+      margin: .6em .6em 0;
+      text-indent: -9999px;
+    }
+
+    p
+    {
+      font: .855em/1.2 'Verdana';
+      margin: 1em;
+    }
+  }
+
+  .sponsors, .support
+  {
+    background-color: #F5F6F8;
+    height: 7.4em;
+    @include append-bottom(1.5em);
+    @include box-shadow(#D6E2E1 2px 2px 0 inset, #D6E2E1 -2px -2px 0 inset);
+  }
+
+  .infobox
+  {
+    @include column(22, true);
+    @include prepend(1);
+    @include append(1);
+
+    margin-top: 0;
+    text-align: center;
 
     em
     {
-      font-style: normal;
       font-weight: bold;
+      font-style: normal;
     }
   }
 }
