@@ -97,14 +97,6 @@ header {
     position: relative;
     padding: 2em 0 0;
     text-align: center; }
-  header .donate {
-    position: absolute;
-    bottom: 0;
-    right: 0; }
-    header .donate a {
-      display: block; }
-    header .donate img {
-      border: 0; }
   header .sponsors {
     text-align: center;
     display: inline;
@@ -112,7 +104,7 @@ header {
     margin-right: 10px;
     width: 262px; }
     header .sponsors h2 {
-      background: url('/images/sponsored_by_header.png?1316117832') no-repeat;
+      background: url('/images/sponsored_by_header.png?1316386739') no-repeat;
       height: 28px;
       margin: -6px 1em 0;
       text-indent: -9999px;
@@ -136,7 +128,7 @@ header {
     * html header .support {
       overflow-x: hidden; }
     header .support h2 {
-      background: url('/images/support_pry_header.png?1316117984') top left no-repeat;
+      background: url('/images/support_pry_header.png?1316386739') top left no-repeat;
       font: 1.6em/1 "Arial";
       margin: .6em .6em 0;
       text-indent: -9999px; }
@@ -184,7 +176,7 @@ nav {
       *vertical-align: auto; }
       nav ul li, nav ul li a {
         *display: inline; }
-    nav ul li a {
+    nav ul li a, nav ul li .button {
       background: #4E565D;
       background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(9%, #1a1f24), color-stop(39%, #303942));
       background-image: -webkit-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
@@ -193,11 +185,12 @@ nav {
       background-image: -ms-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
       background-image: linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
       border: 1px solid #353C3F;
+      color: white;
       font: bold .8em 'Verdana', sans-serif;
       margin: .4em 1em;
       padding: .6em 1.2em;
+      position: relative;
       text-decoration: none;
-      color: white;
       -moz-box-shadow: #555555 1px 1px 5px;
       -webkit-box-shadow: #555555 1px 1px 5px;
       -o-box-shadow: #555555 1px 1px 5px;
@@ -210,14 +203,29 @@ nav {
       border-radius: 4px;
       color: white;
       text-shadow: black 0 0 8px; }
-      nav ul li a:visited {
+      nav ul li a:visited, nav ul li .button:visited {
         color: white; }
-      nav ul li a:focus {
+      nav ul li a:focus, nav ul li .button:focus {
         color: white; }
-      nav ul li a:hover {
+      nav ul li a:hover, nav ul li .button:hover {
         color: red; }
-      nav ul li a:active {
+      nav ul li a:active, nav ul li .button:active {
         color: white; }
+      nav ul li a:hover, nav ul li .button:hover {
+        top: 1px; }
+    nav ul li.donate .button {
+      background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(9%, #a25600), color-stop(39%, #ce6d00));
+      background-image: -webkit-linear-gradient(bottom center, #a25600 9%, #ce6d00 39%);
+      background-image: -moz-linear-gradient(bottom center, #a25600 9%, #ce6d00 39%);
+      background-image: -o-linear-gradient(bottom center, #a25600 9%, #ce6d00 39%);
+      background-image: -ms-linear-gradient(bottom center, #a25600 9%, #ce6d00 39%);
+      background-image: linear-gradient(bottom center, #a25600 9%, #ce6d00 39%);
+      border-color: #AB4B11;
+      cursor: pointer;
+      padding: .8em 1.4em; }
+      nav ul li.donate .button:hover {
+        color: white;
+        text-shadow: white 0 0 8px; }
 
 p.donate a {
   float: right; }
@@ -241,7 +249,7 @@ footer {
     text-shadow: none; }
 
 body {
-  background: url('/images/background.jpg?1316118812') repeat;
+  background: url('/images/background.jpg?1316386739') repeat;
   color: black; }
 
 div.wrap {
