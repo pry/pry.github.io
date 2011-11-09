@@ -99,27 +99,52 @@ header {
     text-align: center; }
   header .sponsors {
     text-align: center;
+    background-color: #F5F6F8;
     display: inline;
     float: left;
-    margin-right: 10px;
-    width: 262px; }
+    position: relative;
+    margin: 0 -136px 1.5em 136px;
+    display: inline;
+    float: left;
+    margin-right: 0;
+    width: 534px;
+    margin-bottom: 1.5em;
+    -moz-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
+    -webkit-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
+    -o-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
+    box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset; }
     header .sponsors h2 {
-      background: url('/images/sponsored_by_header.png?1316386739') no-repeat;
+      background: url('/images/sponsored_by_header.png?1320855927') no-repeat;
       height: 28px;
       margin: -6px 1em 0;
       text-indent: -9999px;
       width: 152px; }
-    header .sponsors a {
+    header .sponsors > a {
       display: -moz-inline-box;
       -moz-box-orient: vertical;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      margin: 1em 0; }
-      header .sponsors a {
+      margin: 1em 1em; }
+      header .sponsors > a {
         *display: inline; }
     * html header .sponsors {
       overflow-x: hidden; }
+  header hr {
+    background: #dddddd;
+    color: #dddddd;
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 0.1em;
+    margin: 0 0 1.45em;
+    border: none;
+    width: 466px;
+    display: inline;
+    float: left;
+    position: relative;
+    margin: 0 -34px 1.5em 34px;
+    margin-bottom: 0.5em; }
   header .support {
     display: inline;
     float: left;
@@ -128,21 +153,25 @@ header {
     * html header .support {
       overflow-x: hidden; }
     header .support h2 {
-      background: url('/images/support_pry_header.png?1316386739') top left no-repeat;
+      background: url('/images/support_pry_header.png?1320855927') top left no-repeat;
       font: 1.6em/1 "Arial";
-      margin: .6em .6em 0;
-      text-indent: -9999px; }
+      margin: 1.2em .6em 0;
+      text-indent: -9999px;
+      display: inline;
+      float: left;
+      margin-right: 10px;
+      width: 228px; }
+      * html header .support h2 {
+        overflow-x: hidden; }
     header .support p {
       font: 0.855em/1.2 "Verdana";
-      margin: 1em; }
-  header .sponsors, header .support {
-    background-color: #F5F6F8;
-    height: 7.4em;
-    margin-bottom: 1.5em;
-    -moz-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
-    -webkit-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
-    -o-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
-    box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset; }
+      margin: 1em;
+      display: inline;
+      float: left;
+      margin-right: 0;
+      width: 262px; }
+      * html header .support p {
+        overflow-x: hidden; }
   header .infobox {
     display: inline;
     float: left;
@@ -249,7 +278,7 @@ footer {
     text-shadow: none; }
 
 body {
-  background: url('/images/background.jpg?1316386739') repeat;
+  background: url('/images/background.jpg?1320855927') repeat;
   color: black; }
 
 div.wrap {
