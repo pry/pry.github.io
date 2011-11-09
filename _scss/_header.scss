@@ -14,6 +14,7 @@ header
   .sponsors
   {
     text-align: center;
+    background-color: #F5F6F8;
 
     h2
     {
@@ -24,13 +25,24 @@ header
       width: 152px;
     }
 
-    a
+    & > a
     {
       @include inline-block;
-      margin: 1em 0;
+      margin: 1em 1em;
     }
 
-    @include column(8);
+    @include push(4);
+    @include column(16, true);
+    @include append-bottom(1.5em);
+    @include box-shadow(#D6E2E1 2px 2px 0 inset, #D6E2E1 -2px -2px 0 inset);
+  }
+
+  hr
+  {
+    @include colruler;
+    width: span(14);
+    @include push(1);
+    margin-bottom: 0.5em;
   }
 
   .support
@@ -41,23 +53,19 @@ header
     {
       background: image-url('/images/support_pry_header.png') top left no-repeat;
       font: 1.6em/1 'Arial';
-      margin: .6em .6em 0;
+      margin: 1.2em .6em 0;
       text-indent: -9999px;
+
+      @include column(7);
     }
 
     p
     {
       font: .855em/1.2 'Verdana';
       margin: 1em;
-    }
-  }
 
-  .sponsors, .support
-  {
-    background-color: #F5F6F8;
-    height: 7.4em;
-    @include append-bottom(1.5em);
-    @include box-shadow(#D6E2E1 2px 2px 0 inset, #D6E2E1 -2px -2px 0 inset);
+      @include column(8, true);
+    }
   }
 
   .infobox
