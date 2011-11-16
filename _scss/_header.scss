@@ -65,7 +65,7 @@ header
       margin: 1em;
       text-align: center;
 
-      @include column(8, true);
+      @include column(16, true);
     }
   }
 
