@@ -63,8 +63,9 @@ header
     {
       font: .855em/1.2 'Verdana';
       margin: 1em;
+      text-align: center;
 
-      @include column(8, true);
+      @include column(16, true);
     }
   }
 
