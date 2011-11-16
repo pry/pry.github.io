@@ -114,7 +114,7 @@ header {
     -o-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
     box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset; }
     header .sponsors h2 {
-      background: url('/images/sponsored_by_header.png?1320855927') no-repeat;
+      background: url('/images/sponsored_by_header.png?1316138662') no-repeat;
       height: 28px;
       margin: -6px 1em 0;
       text-indent: -9999px;
@@ -153,7 +153,7 @@ header {
     * html header .support {
       overflow-x: hidden; }
     header .support h2 {
-      background: url('/images/support_pry_header.png?1320855927') top left no-repeat;
+      background: url('/images/support_pry_header.png?1316138662') top left no-repeat;
       font: 1.6em/1 "Arial";
       margin: 1.2em .6em 0;
       text-indent: -9999px;
@@ -166,10 +166,11 @@ header {
     header .support p {
       font: 0.855em/1.2 "Verdana";
       margin: 1em;
+      text-align: center;
       display: inline;
       float: left;
       margin-right: 0;
-      width: 262px; }
+      width: 534px; }
       * html header .support p {
         overflow-x: hidden; }
   header .infobox {
@@ -278,7 +279,7 @@ footer {
     text-shadow: none; }
 
 body {
-  background: url('/images/background.jpg?1320855927') repeat;
+  background: url('/images/background.jpg?1316138662') repeat;
   color: black; }
 
 div.wrap {
