@@ -40,40 +40,23 @@ header
   hr
   {
     @include colruler;
-    width: span(14);
     @include push(1);
-    margin-bottom: 0.5em;
+    @include column(14, true);
+    margin-bottom: 0;
+    margin-top: 1em;
   }
 
-  .support
+  p.support
   {
+    font: .855em/1.2 'Verdana';
     @include column(16, true);
-
-    h2
-    {
-      background: image-url('/images/support_pry_header.png') top left no-repeat;
-      font: 1.6em/1 'Arial';
-      margin: 1.2em .6em 0;
-      text-indent: -9999px;
-
-      @include column(7);
-    }
-
-    p
-    {
-      font: .855em/1.2 'Verdana';
-      margin: 1em;
-      text-align: center;
-
-      @include column(16, true);
-    }
+    padding: .5em 0 1em;
   }
 
   .infobox
   {
     @include column(22, true);
     @include prepend(1);
-    @include append(1);
 
     margin-top: 0;
     text-align: center;

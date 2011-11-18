@@ -114,7 +114,7 @@ header {
     -o-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
     box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset; }
     header .sponsors h2 {
-      background: url('/images/sponsored_by_header.png?1316138662') no-repeat;
+      background: url('/images/sponsored_by_header.png?1316386739') no-repeat;
       height: 28px;
       margin: -6px 1em 0;
       text-indent: -9999px;
@@ -139,47 +139,33 @@ header {
     height: 0.1em;
     margin: 0 0 1.45em;
     border: none;
-    width: 466px;
     display: inline;
     float: left;
     position: relative;
     margin: 0 -34px 1.5em 34px;
-    margin-bottom: 0.5em; }
-  header .support {
     display: inline;
     float: left;
     margin-right: 0;
-    width: 534px; }
-    * html header .support {
+    width: 466px;
+    margin-bottom: 0;
+    margin-top: 1em; }
+    * html header hr {
       overflow-x: hidden; }
-    header .support h2 {
-      background: url('/images/support_pry_header.png?1316138662') top left no-repeat;
-      font: 1.6em/1 "Arial";
-      margin: 1.2em .6em 0;
-      text-indent: -9999px;
-      display: inline;
-      float: left;
-      margin-right: 10px;
-      width: 228px; }
-      * html header .support h2 {
-        overflow-x: hidden; }
-    header .support p {
-      font: 0.855em/1.2 "Verdana";
-      margin: 1em;
-      text-align: center;
-      display: inline;
-      float: left;
-      margin-right: 0;
-      width: 534px; }
-      * html header .support p {
-        overflow-x: hidden; }
+  header p.support {
+    font: 0.855em/1.2 "Verdana";
+    display: inline;
+    float: left;
+    margin-right: 0;
+    width: 534px;
+    padding: .5em 0 1em; }
+    * html header p.support {
+      overflow-x: hidden; }
   header .infobox {
     display: inline;
     float: left;
     margin-right: 0;
     width: 738px;
     padding-left: 34px;
-    padding-right: 34px;
     margin-top: 0;
     text-align: center; }
     * html header .infobox {
@@ -279,7 +265,7 @@ footer {
     text-shadow: none; }
 
 body {
-  background: url('/images/background.jpg?1316138662') repeat;
+  background: url('/images/background.jpg?1316386739') repeat;
   color: black; }
 
 div.wrap {
