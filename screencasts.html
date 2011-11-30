@@ -1,110 +1,84 @@
 ---
 # Jekyll wants this YAML front matter to parse the document.
+layout: default
+title: Pry - Screencasts
 ---
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
 
-    <title>Pry - an IRB alternative and runtime developer console</title>
-    <meta name="description" content="Pry is a powerful alternative to the standard IRB shell for Ruby.">
 
-    <link href="http://fonts.googleapis.com/css?family=Maven+Pro&amp;v1" rel="stylesheet" type="text/css">
-    <link type="stylesheet" rel="stylesheet" title="Sunburst" href="http://yandex.st/highlightjs/6.0/styles/sunburst.min.css">
-    <link type="stylesheet" rel="stylesheet" href="/stylesheets/style.css">
+<header>
+  {% include logo_small.html %}
+</header>
 
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrap">
-      <header>
-        {% include logo_small.html %}
+{% include navigation.html %}
 
-        {% include navigation.html %}
-      </header>
+<article>
+  <h1>Introductory screencast</h1>
+  <p>
+    It is recommended you watch the following screencast put
+    together by <a href="https://github.com/joshcheek">Josh
+    Cheek</a>. It includes instructions on installing Pry as
+    well as some coverage of core features.
+  </p>
 
-      <article>
-        <h1>Introductory screencast</h1>
-        <p>
-          It is recommended you watch the following screencast put
-          together by <a href="https://github.com/joshcheek">Josh
-          Cheek</a>. It includes instructions on installing Pry as
-          well as some coverage of core features.
-        </p>
+  <center>
+    <iframe src="http://player.vimeo.com/video/26391171?title=0&amp;byline=0&amp;portrait=0"
+            width="633" height="475" frameborder="0"></iframe>
+  </center>
+</article>
 
-        <center>
-          <iframe src="http://player.vimeo.com/video/26391171?title=0&amp;byline=0&amp;portrait=0"
-                  width="633" height="475" frameborder="0"></iframe>
-        </center>
-      </article>
+<article>
+  <h1>Alternative introduction</h1>
+  
+  <p>Another introductory screencast covering the basics.</p>
+
+  <center>
+    <iframe src="http://player.vimeo.com/video/23535249?title=0&amp;byline=0&amp;portrait=0"
+            width="633" height="475" frameborder="0"></iframe>
+  </center>
+</article>
+
+
+<article>
+  <h1>Pry with Rails</h1>
+  
+  <p>How to integrate Pry into a Rails application, and how it can aid in debugging.</p>
+  
+  <p><a href="http://railscasts.com/episodes/280-pry-with-rails">Watch at RailsCasts</a>.</p>
+
+  <center>
+    <video width="633" height="475" controls="controls">
+      <source src="http://media.railscasts.com/assets/episodes/videos/280-pry-with-rails.mp4" />
+      <source src="http://media.railscasts.com/assets/episodes/videos/280-pry-with-rails.webm" />
+      <source src="http://media.railscasts.com/assets/episodes/videos/280-pry-with-rails.ogv" />
       
-      <article>
-        <h1>Alternative introduction</h1>
-        
-        <p>Another introductory screencast covering the basics.</p>
+      Your browser does not support the video tag.             
+    </video>         
+  </center>          
+</article>
 
-        <center>
-          <iframe src="http://player.vimeo.com/video/23535249?title=0&amp;byline=0&amp;portrait=0"
-                  width="633" height="475" frameborder="0"></iframe>
-        </center>
-      </article>
-      
-      
-      <article>
-        <h1>Pry with Rails</h1>
-        
-        <p>How to integrate Pry into a Rails application, and how it can aid in debugging.</p>
-        
-        <p><a href="http://railscasts.com/episodes/280-pry-with-rails">Watch at RailsCasts</a>.</p>
 
-        <center>
-          <video width="633" height="475" controls="controls">
-            <source src="http://media.railscasts.com/assets/episodes/videos/280-pry-with-rails.mp4" />
-            <source src="http://media.railscasts.com/assets/episodes/videos/280-pry-with-rails.webm" />
-            <source src="http://media.railscasts.com/assets/episodes/videos/280-pry-with-rails.ogv" />
-            
-            Your browser does not support the video tag.             
-          </video>         
-        </center>          
-      </article>
-      
-      
-      <article>
-        <h1>Using Pry at runtime</h1>
-        
-        <p>Demonstration of invoking a Pry session at runtime to modify and develop a game while the game is running.</p>
+<article>
+  <h1>Using Pry at runtime</h1>
+  
+  <p>Demonstration of invoking a Pry session at runtime to modify and develop a game while the game is running.</p>
 
-        <center>
-          <iframe src="http://player.vimeo.com/video/23634437?title=0&amp;byline=0&amp;portrait=0"
-                  width="633" height="475" frameborder="0"></iframe>
-        </center>
-      </article>
-    
-    
-      <article>
-        <h1>HowToCode</h1>
-        
-        <p>Portugese screencast by Nando Vieira.</p>
+  <center>
+    <iframe src="http://player.vimeo.com/video/23634437?title=0&amp;byline=0&amp;portrait=0"
+            width="633" height="475" frameborder="0"></iframe>
+  </center>
+</article>
 
-        <center>
-          <video width="633" height="475" controls="controls">
-            <source src="http://f.simplesideias.com.br/howtocode/screencasts/pry/video.mp4" />
-            Your browser does not support the video tag. 
-            <a href="http://f.simplesideias.com.br/howtocode/screencasts/pry/video.mp4">Direct link to video (MP4)</a>
-          </video>
-        </center>
-      </article>
-      
-      <br />
-      <br />
-      
-      {% include navigation.html %}
-      
-    </div>      
-    {% include footer.html %}
 
-    {% include scripts.html %}
-  </body>
-</html>
+<article>
+  <h1>HowToCode</h1>
+  
+  <p>Portugese screencast by Nando Vieira.</p>
+
+  <center>
+    <video width="633" height="475" controls="controls">
+      <source src="http://f.simplesideias.com.br/howtocode/screencasts/pry/video.mp4" />
+      Your browser does not support the video tag. 
+      <a href="http://f.simplesideias.com.br/howtocode/screencasts/pry/video.mp4">Direct link to video (MP4)</a>
+    </video>
+  </center>
+</article>

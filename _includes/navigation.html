@@ -1,9 +1,21 @@
 <nav>
   <ul>
-    <li> <a href="/">Home</a> </li>
+    <li>
+      {% if page.url == '/index.html' %}
+        <span class="current_page">Home</span>
+      {% else %}
+        <a href="index.html">Home</a> 
+      {% endif %}
+    </li>
     <li> <a href="https://github.com/pry/pry/wiki">Wiki</a> </li>
     <li> <a href="http://rdoc.info/github/pry/pry/master/Pry">API Docs</a> </li>
-    <li> <a href="screencasts.html">Screencasts</a> </li>
+    <li>
+      {% if page.url == '/screencasts.html' %}
+        <span class="current_page">Screencasts</span>
+      {% else %}
+        <a href="screencasts.html">Screencasts</a>
+      {% endif %}
+    </li>
     <li class="donate">{% include donation.html %}</li>
   </ul>
 </nav>
