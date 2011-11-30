@@ -33,6 +33,23 @@ nav
 
       &:hover { top: 1px; }
     }
+    
+    li .current_page
+    {
+      background: #4E565D;
+      @include background-image(linear-gradient(bottom center, rgb(26, 31, 36) 9%, rgb(48, 57, 66) 39%));
+      border: 1px solid #353C3F;
+      color: #909090;
+      font: bold .8em 'Verdana', sans-serif;
+      margin: .4em 1em;
+      padding: .6em 1.2em;
+      position: relative;
+
+      @include box-shadow(#555 1px 1px 5px);
+      @include border-radius(4px);
+      // http://compass-style.org/reference/compass/typography/links/link_colors/#mixin-link-colors
+      @include text-shadow(black 0 0 8px);
+    }
 
     li.donate .button
     {

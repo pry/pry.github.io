@@ -230,6 +230,31 @@ nav {
         color: white; }
       nav ul li a:hover, nav ul li .button:hover {
         top: 1px; }
+    nav ul li .current_page {
+      background: #4E565D;
+      background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(9%, #1a1f24), color-stop(39%, #303942));
+      background-image: -webkit-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
+      background-image: -moz-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
+      background-image: -o-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
+      background-image: -ms-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
+      background-image: linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
+      border: 1px solid #353C3F;
+      color: #909090;
+      font: bold .8em 'Verdana', sans-serif;
+      margin: .4em 1em;
+      padding: .6em 1.2em;
+      position: relative;
+      -moz-box-shadow: #555555 1px 1px 5px;
+      -webkit-box-shadow: #555555 1px 1px 5px;
+      -o-box-shadow: #555555 1px 1px 5px;
+      box-shadow: #555555 1px 1px 5px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -o-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -khtml-border-radius: 4px;
+      border-radius: 4px;
+      text-shadow: black 0 0 8px; }
     nav ul li.donate .button {
       background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(9%, #a25600), color-stop(39%, #ce6d00));
       background-image: -webkit-linear-gradient(bottom center, #a25600 9%, #ce6d00 39%);

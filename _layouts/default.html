@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <title>{{ page.title }}</title>
+    <meta name="description" content="Pry is a powerful alternative to the standard IRB shell for Ruby.">
+
+    <link href="http://fonts.googleapis.com/css?family=Maven+Pro&amp;v1" rel="stylesheet" type="text/css">
+    <link type="stylesheet" rel="stylesheet" title="Sunburst" href="http://yandex.st/highlightjs/6.0/styles/sunburst.min.css">
+    <link type="stylesheet" rel="stylesheet" href="/stylesheets/style.css">
+
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrap">
+    
+      {{ content }}
+           
+      <br />
+      <br />
+      
+      {% include navigation.html %}
+    </div>
+
+    {% include footer.html %}
+    
+    {% include scripts.html %}
+  </body>
+</html>
