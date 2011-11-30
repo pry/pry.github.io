@@ -28,7 +28,7 @@ header
     & > a
     {
       @include inline-block;
-      margin: 1em 1em;
+      margin: 6px;
     }
 
     @include push(4);
@@ -48,9 +48,10 @@ header
 
   p.support
   {
-    font: .855em/1.2 'Verdana';
+    font: .7em 'Verdana', sans-serif;
     @include column(16, true);
-    padding: .5em 0 1em;
+    padding: 0;
+    margin-top: 0;
   }
 
   .infobox

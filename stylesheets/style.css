@@ -114,7 +114,7 @@ header {
     -o-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
     box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset; }
     header .sponsors h2 {
-      background: url('/images/sponsored_by_header.png?1316386739') no-repeat;
+      background: url('/images/sponsored_by_header.png?1321447254') no-repeat;
       height: 28px;
       margin: -6px 1em 0;
       text-indent: -9999px;
@@ -125,7 +125,7 @@ header {
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      margin: 1em 1em; }
+      margin: 6px; }
       header .sponsors > a {
         *display: inline; }
     * html header .sponsors {
@@ -152,12 +152,13 @@ header {
     * html header hr {
       overflow-x: hidden; }
   header p.support {
-    font: 0.855em/1.2 "Verdana";
+    font: .7em 'Verdana', sans-serif;
     display: inline;
     float: left;
     margin-right: 0;
     width: 534px;
-    padding: .5em 0 1em; }
+    padding: 0;
+    margin-top: 0; }
     * html header p.support {
       overflow-x: hidden; }
   header .infobox {
@@ -265,7 +266,7 @@ footer {
     text-shadow: none; }
 
 body {
-  background: url('/images/background.jpg?1316386739') repeat;
+  background: url('/images/background.jpg?1321447254') repeat;
   color: black; }
 
 div.wrap {
