@@ -24,10 +24,7 @@
       </div>
 
       <header>
-        <div id="logo">
-          <h1>Pry — Get to the Code</h1>
-          <img src="/images/pry_logo.png" alt="Pry Ruby Logo"/>
-        </div>
+        {% include logo.html %}
 
         <div class="sponsors">
           <h2>Sponsored by</h2>
@@ -69,21 +66,6 @@
           For comprehensive coverage of Pry's features please
           <a href="https://github.com/pry/pry/wiki"><strong>check out the Wiki</strong></a>.
         </p>
-      </article>
-
-      <article>
-        <h1>Introductory screencast</h1>
-        <p>
-          It is recommended you watch the following screencast put
-          together by <a href="https://github.com/joshcheek">Joshua
-          Cheek</a>. It includes instructions on installing Pry as
-          well as some coverage of core features:
-        </p>
-
-        <center>
-          <iframe src="http://player.vimeo.com/video/26391171?title=0&amp;byline=0&amp;portrait=0"
-                  width="633" height="475" frameborder="0"></iframe>
-        </center>
       </article>
 
       <article>
@@ -170,17 +152,6 @@
       </article>
 
       <article>
-        <h1>Learn more</h1>
-        <p>
-          There is a significant amount of information on Pry
-          available. After watching the screencast (above) you should then
-          check out the folllowing links, especially the Wiki:
-        </p>
-
-        {% include navigation.html %}
-      </article>
-
-      <article>
         <h1>Please support Pry!</h1>
         <p class="donate">
           If you liked Pry and found it useful <em>please consider
@@ -198,40 +169,20 @@
           Pry is primarily the work
           of John Mair (aka banisterfiend; <a href="https://github.com/banister">github</a>, <a href="https://twitter.com/banisterfiend">twitter</a>, <a href="http://banisterfiend.wordpress.com">blog</a>). The project is also aided by a healthy
           number
-          of <a href="https://github.com/pry/pry/contributors">contributors.</a><br/><br/>
+          of <a href="https://github.com/pry/pry/contributors">contributors</a>.<br/><br/>
           To participate in Pry's development (and get your name on
-          the list!) see the wiki article on <a href="https://github.com/pry/pry/wiki/Contributing">how to contribute</a>
+          the list!) see the wiki article on <a href="https://github.com/pry/pry/wiki/Contributing">how to contribute</a>.
         </p>
       </article>
+           
+      <br />
+      <br />
+      
+      {% include navigation.html %}
     </div>
 
-    <footer>
-      <p>
-        Pry comes to you from the mind of <a href="https://github.com/banister">John Mair</a> who also brought you
-        <a href="https://github.com/banister/texplay">TexPlay</a>,
-        <a href="https://github.com/banister/method_source">MethodSource</a>,
-        <a href="https://github.com/banister/devil">Devil</a>,
-        <a href="https://github.com/banister/remix">Remix</a> &amp;
-        <a href="https://github.com/banister/free">Free</a>.
-      </p>
-
-      <p>
-        <a href="http://ippa.se">HTML5 by ippa</a> |
-        Pry logo by <a href="http://www.studiokun.co.cc">STUDIOKUN</a>
-      </p>
-    </footer>
-
-    <script type="application/javascript" src="http://yandex.st/highlightjs/6.0/highlight.min.js"></script>
-    <script type="application/javascript">
-      function $(selector){
-        var elements = Array.prototype.slice.call( document.querySelectorAll(selector) )
-        var items = selector.split(" ")
-        return (items[items.length-1][0] == "#") ? elements[0] : elements // Return single element if fetching a
-      }
-      $("code").forEach( function(tag) {
-        tag.innerHTML = tag.innerHTML.replace(/^\n/, "")
-        hljs.highlightBlock(tag, '    ');
-      });
-    </script>
+    {% include footer.html %}
+    
+    {% include scripts.html %}
   </body>
 </html>
