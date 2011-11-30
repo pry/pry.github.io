@@ -1,0 +1,12 @@
+<script type="application/javascript" src="http://yandex.st/highlightjs/6.0/highlight.min.js"></script>
+<script type="application/javascript">
+  function $(selector){
+    var elements = Array.prototype.slice.call( document.querySelectorAll(selector) )
+    var items = selector.split(" ")
+    return (items[items.length-1][0] == "#") ? elements[0] : elements // Return single element if fetching a
+  }
+  $("code").forEach( function(tag) {
+    tag.innerHTML = tag.innerHTML.replace(/^\n/, "")
+    hljs.highlightBlock(tag, '    ');
+  });
+</script>
