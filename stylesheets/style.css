@@ -114,7 +114,7 @@ header {
     -o-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
     box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset; }
     header .sponsors h2 {
-      background: url('/images/sponsored_by_header.png?1321447254') no-repeat;
+      background: url('/images/sponsored_by_header.png?1327828103') no-repeat;
       height: 28px;
       margin: -6px 1em 0;
       text-indent: -9999px;
@@ -291,7 +291,7 @@ footer {
     text-shadow: none; }
 
 body {
-  background: url('/images/background.jpg?1321447254') repeat;
+  background: url('/images/background.jpg?1327828103') repeat;
   color: black; }
 
 div.wrap {
@@ -321,3 +321,31 @@ hr {
   width: 60%;
   border: 0;
   margin-top: 3em; }
+
+body.wiki h1 {
+  margin-top: 102px; }
+body.wiki h3 {
+  margin-top: 25px; }
+body.wiki .logo {
+  float: right; }
+body.wiki .back-to-top {
+  font-size: small;
+  float: right;
+  margin-top: -17px; }
+body.wiki code {
+  padding: 0px 2px;
+  background-color: #E0E0DD; }
+body.wiki pre code {
+  background-color: black;
+  padding: inherit; }
+body.wiki div.menu {
+  float: right;
+  width: 300px; }
+  body.wiki div.menu h4 {
+    font-size: small;
+    color: gray;
+    padding-left: 40px;
+    margin-bottom: -10px;
+    margin-top: 28px; }
+  body.wiki div.menu li {
+    list-style: diamond; }

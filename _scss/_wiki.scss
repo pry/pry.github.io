@@ -1,0 +1,40 @@
+// Get  the underline past the logo
+h1 { margin-top:  102px;}
+
+// associate titles with content
+h3 { margin-top: 25px; }
+.logo { float: right }
+.back-to-top
+{
+  font-size: small;
+  float: right;
+  // base-line alignment with h3 tags.
+  margin-top: -17px;
+}
+code
+{
+  padding: 0px 2px;
+  background-color: #E0E0DD;
+}
+// undo changes above for code in <pre> blocks
+pre code
+{
+  background-color: black;
+  padding: inherit
+}
+div.menu
+{
+  float: right;
+  width: 300px;
+
+  h4
+  {
+    font-size: small;
+    color: gray;
+    padding-left: 40px;
+    margin-bottom: -10px;
+    margin-top: 28px;
+  }
+
+  li { list-style: diamond; }
+}

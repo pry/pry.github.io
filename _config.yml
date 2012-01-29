@@ -8,5 +8,7 @@
 # List of directories to exclude in Jekyll
 exclude: []
 
+# Exclude the "date" from the urls...
+permalink: none
 # Custom data, available through {{ site.<variable> }}
 # none so far ^^

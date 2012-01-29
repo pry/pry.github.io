@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>{{ page.title }}</title>
+    <meta name="description" content="Pry is a powerful alternative to the standard IRB shell for Ruby." />
+
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Maven+Pro&amp;v1" />
+    <link type="text/css" rel="stylesheet" title="Sunburst" href="http://yandex.st/highlightjs/6.0/styles/sunburst.min.css" />
+    <link type="text/css" rel="stylesheet" href="/stylesheets/style.css" />
+
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="wiki">
+    <div class="wrap">
+      <div id="logo" style="float:right">
+        <a href="/">
+          <img src="/images/pry_logo.png" alt="Pry Ruby Logo" height="153" width="209" />
+        </a>
+      </div>
+      <h1>{{ page.title }}</h1>
+      {% if page.menu %}
+        <div class="menu"><!-- TODO: this should be <nav> -->
+          <h4>QUICK MENU</h4>
+          <ul>
+            {% for title in page.menu %}
+                <li><a href="#{{ title | downcase | replace:' ','_' }}">{{title}}</a></li>
+            {% endfor %}
+          </ul>
+
+          <div class="back" style="float: right">
+              <small><a href="/Home.html">← Back to Main Menu</a></small>
+          </div>
+        </div>
+      {% endif %}
+
+      {{ content }}
+
+      <br />
+      <br />
+
+      {% include navigation.html %}
+    </div>
+
+    {% include footer.html %}
+
+    {% include scripts.html %}
+  </body>
+</html>

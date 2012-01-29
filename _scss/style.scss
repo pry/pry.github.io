@@ -37,3 +37,7 @@ hr
   margin-top: 3em;
 }
 
+body.wiki {
+  @import "wiki.scss";
+}
+
