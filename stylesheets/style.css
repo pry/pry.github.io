@@ -348,4 +348,11 @@ body.wiki div.menu {
     margin-bottom: -10px;
     margin-top: 28px; }
   body.wiki div.menu li {
-    list-style: diamond; }
+    margin-bottom: 3px; }
+body.wiki div.wrap a {
+  text-decoration: none;
+  color: #21F; }
+  body.wiki div.wrap a:visited {
+    color: #217; }
+  body.wiki div.wrap a:hover {
+    text-decoration: underline; }

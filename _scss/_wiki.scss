@@ -36,5 +36,17 @@ div.menu
     margin-top: 28px;
   }
 
-  li { list-style: diamond; }
+  li { margin-bottom: 3px; }
+}
+div.wrap
+{
+  // There tend to be a lot of links in the guides,
+  //   tone them down a tad.
+  a
+  {
+    text-decoration: none;
+    color: #21F;
+    &:visited { color: #217; }
+    &:hover { text-decoration: underline }
+  }
 }
