@@ -22,7 +22,7 @@ pre code
   background-color: black;
   padding: inherit
 }
-div.menu
+nav.local
 {
   float: right;
   width: 300px;
@@ -38,7 +38,7 @@ div.menu
 
   li { margin-bottom: 3px; }
 }
-div.wrap
+article, nav.local
 {
   // There tend to be a lot of links in the guides,
   //   tone them down a tad.

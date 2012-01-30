@@ -175,25 +175,25 @@ header {
       font-weight: bold;
       font-style: normal; }
 
-nav {
+nav.global {
   clear: both;
   display: block;
   margin: 1em auto 0;
   overflow: hidden;
   *zoom: 1; }
-  nav ul {
+  nav.global ul {
     margin: 0;
     padding: 0;
     text-align: center; }
-    nav ul li, nav ul li a {
+    nav.global ul li, nav.global ul li a {
       display: -moz-inline-box;
       -moz-box-orient: vertical;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto; }
-      nav ul li, nav ul li a {
+      nav.global ul li, nav.global ul li a {
         *display: inline; }
-    nav ul li a, nav ul li .button {
+    nav.global ul li a, nav.global ul li .button {
       background: #4E565D;
       background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(9%, #1a1f24), color-stop(39%, #303942));
       background-image: -webkit-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
@@ -220,17 +220,17 @@ nav {
       border-radius: 4px;
       color: white;
       text-shadow: black 0 0 8px; }
-      nav ul li a:visited, nav ul li .button:visited {
+      nav.global ul li a:visited, nav.global ul li .button:visited {
         color: white; }
-      nav ul li a:focus, nav ul li .button:focus {
+      nav.global ul li a:focus, nav.global ul li .button:focus {
         color: white; }
-      nav ul li a:hover, nav ul li .button:hover {
+      nav.global ul li a:hover, nav.global ul li .button:hover {
         color: red; }
-      nav ul li a:active, nav ul li .button:active {
+      nav.global ul li a:active, nav.global ul li .button:active {
         color: white; }
-      nav ul li a:hover, nav ul li .button:hover {
+      nav.global ul li a:hover, nav.global ul li .button:hover {
         top: 1px; }
-    nav ul li .current_page {
+    nav.global ul li .current_page {
       background: #4E565D;
       background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(9%, #1a1f24), color-stop(39%, #303942));
       background-image: -webkit-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
@@ -255,7 +255,7 @@ nav {
       -khtml-border-radius: 4px;
       border-radius: 4px;
       text-shadow: black 0 0 8px; }
-    nav ul li.donate .button {
+    nav.global ul li.donate .button {
       background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(9%, #a25600), color-stop(39%, #ce6d00));
       background-image: -webkit-linear-gradient(bottom center, #a25600 9%, #ce6d00 39%);
       background-image: -moz-linear-gradient(bottom center, #a25600 9%, #ce6d00 39%);
@@ -265,7 +265,7 @@ nav {
       border-color: #AB4B11;
       cursor: pointer;
       padding: .8em 1.4em; }
-      nav ul li.donate .button:hover {
+      nav.global ul li.donate .button:hover {
         color: white;
         text-shadow: white 0 0 8px; }
 
@@ -338,21 +338,21 @@ body.wiki code {
 body.wiki pre code {
   background-color: black;
   padding: inherit; }
-body.wiki div.menu {
+body.wiki nav.local {
   float: right;
   width: 300px; }
-  body.wiki div.menu h4 {
+  body.wiki nav.local h4 {
     font-size: small;
     color: gray;
     padding-left: 40px;
     margin-bottom: -10px;
     margin-top: 28px; }
-  body.wiki div.menu li {
+  body.wiki nav.local li {
     margin-bottom: 3px; }
-body.wiki div.wrap a {
+body.wiki article a, body.wiki nav.local a {
   text-decoration: none;
   color: #21F; }
-  body.wiki div.wrap a:visited {
+  body.wiki article a:visited, body.wiki nav.local a:visited {
     color: #217; }
-  body.wiki div.wrap a:hover {
+  body.wiki article a:hover, body.wiki nav.local a:hover {
     text-decoration: underline; }
