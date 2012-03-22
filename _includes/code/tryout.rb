@@ -1,5 +1,5 @@
 pry(main)> cd FileUtils
-pry(Pathname):1> show-method rm
+pry(FileUtils):1> show-method rm
 
 From: /opt/ruby/lib/ruby/1.9.1/fileutils.rb @ line 556:
 Number of lines: 10
@@ -15,4 +15,4 @@ def rm(list, options = {})
     remove_file path, options[:force]
   end
 end
-pry(Pathname):2>
+pry(FileUtils):2>
