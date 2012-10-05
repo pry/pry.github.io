@@ -1,5 +1,4 @@
 /* (24px + 10px) * 24 - 10px = 806px */
-@import url(//fonts.googleapis.com/css?family=Maven+Pro)
 body {
   font: 100.01%/1.25 "Verdana", "Arial", sans-serif;
   margin: 0; }
@@ -115,7 +114,7 @@ header {
     -o-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
     box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset; }
     header .sponsors h2 {
-      background: url('/images/sponsored_by_header.png?1321447254') no-repeat;
+      background: url('/images/sponsored_by_header.png?1341524177') no-repeat;
       height: 28px;
       margin: -6px 1em 0;
       text-indent: -9999px;
@@ -126,9 +125,12 @@ header {
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      margin: 6px; }
+      margin: 6px;
+      width: 180px; }
       header .sponsors > a {
         *display: inline; }
+      header .sponsors > a:nth-of-type(even) {
+        text-align: right; }
     * html header .sponsors {
       overflow-x: hidden; }
   header hr {
@@ -159,7 +161,7 @@ header {
     margin-right: 0;
     width: 534px;
     padding: 0;
-    margin-top: 0; }
+    margin-top: 15px; }
     * html header p.support {
       overflow-x: hidden; }
   header .infobox {
@@ -292,7 +294,7 @@ footer {
     text-shadow: none; }
 
 body {
-  background: url('/images/background.jpg?1321447254') repeat;
+  background: url('/images/background.jpg?1341524177') repeat;
   color: black; }
 
 div.wrap {
