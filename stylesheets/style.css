@@ -103,34 +103,24 @@ header {
     display: inline;
     float: left;
     position: relative;
-    margin: 0 -136px 1.5em 136px;
+    margin: 0 -68px 1.5em 68px;
     display: inline;
     float: left;
     margin-right: 0;
-    width: 534px;
+    width: 602px;
     margin-bottom: 1.5em;
     -moz-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
     -webkit-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
     -o-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
     box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset; }
     header .sponsors h2 {
-      background: url('/images/sponsored_by_header.png?1341524177') no-repeat;
+      background: url('/images/sponsored_by_header.png?1351674384') no-repeat;
       height: 28px;
       margin: -6px 1em 0;
       text-indent: -9999px;
       width: 152px; }
-    header .sponsors > a {
-      display: -moz-inline-box;
-      -moz-box-orient: vertical;
-      display: inline-block;
-      vertical-align: middle;
-      *vertical-align: auto;
-      margin: 6px;
-      width: 180px; }
-      header .sponsors > a {
-        *display: inline; }
-      header .sponsors > a:nth-of-type(even) {
-        text-align: right; }
+    header .sponsors a {
+      margin: 6px; }
     * html header .sponsors {
       overflow-x: hidden; }
   header hr {
@@ -294,7 +284,7 @@ footer {
     text-shadow: none; }
 
 body {
-  background: url('/images/background.jpg?1341524177') repeat;
+  background: url('/images/background.jpg?1351674384') repeat;
   color: black; }
 
 div.wrap {

@@ -24,20 +24,13 @@ header
       text-indent: -9999px;
       width: 152px;
     }
-
-    & > a
-    {
-      @include inline-block;
+    
+    a {
       margin: 6px;
-      width: 180px;
-
-      &:nth-of-type(even) {
-        text-align: right;
-      }
     }
 
-    @include push(4);
-    @include column(16, true);
+    @include push(2);
+    @include column(18, true);
     @include append-bottom(1.5em);
     @include box-shadow(#D6E2E1 2px 2px 0 inset, #D6E2E1 -2px -2px 0 inset);
   }
