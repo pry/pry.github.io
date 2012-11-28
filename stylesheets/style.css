@@ -115,6 +115,16 @@ header {
         -moz-outline-offset: -0.04em; }
         header #devswag #product_links .uniform_bg span {
           position: relative; }
+      header #devswag #product_links .triangle_left {
+        width: 0;
+        height: 0;
+        border-top: 5px solid rgba(255, 255, 255, 0);
+        border-right: 10px solid #fff;
+        border-bottom: 5px solid rgba(255, 255, 255, 0);
+        position: relative;
+        right: 2px;
+        top: 7px;
+        float: left; }
   header #logo {
     margin-bottom: 2.5em;
     position: relative;

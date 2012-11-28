@@ -38,9 +38,23 @@ header
         outline: #fff solid 0.26em;
         -moz-outline-offset:-0.04em;
 
-        span {
-          position:relative;
+        span
+        {
+          position: relative;
         }
+      }
+
+      .triangle_left
+      {
+        width: 0;
+        height: 0;
+        border-top: 5px solid rgba(255,255,255,0);
+        border-right: 10px solid #fff;
+        border-bottom: 5px solid rgba(255,255,255,0);
+        position: relative;
+        right: 2px;
+        top: 7px;
+        float: left;
       }
     }
   }
