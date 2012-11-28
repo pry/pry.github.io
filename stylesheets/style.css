@@ -92,6 +92,29 @@ header {
   *zoom: 1; }
   header h1 {
     display: none; }
+  header #devswag {
+    position: absolute;
+    left: 1em;
+    top: 0;
+    width: 310px;
+    z-index: 999; }
+    header #devswag a img, header #devswag #product_links {
+      float: left; }
+    header #devswag #pry_t_shirt {
+      opacity: 0;
+      position: absolute;
+      left: 0; }
+    header #devswag #product_links {
+      font-size: 85%;
+      margin-top: 22px;
+      margin-left: -22px; }
+      header #devswag #product_links .uniform_bg {
+        background: url('/images/white_transparent_dot.png?1354097809') repeat;
+        position: relative;
+        outline: #fff solid 0.26em;
+        -moz-outline-offset: -0.04em; }
+        header #devswag #product_links .uniform_bg span {
+          position: relative; }
   header #logo {
     margin-bottom: 2.5em;
     position: relative;
@@ -114,7 +137,7 @@ header {
     -o-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
     box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset; }
     header .sponsors h2 {
-      background: url('/images/sponsored_by_header.png?1351674384') no-repeat;
+      background: url('/images/sponsored_by_header.png?1354060440') no-repeat;
       height: 28px;
       margin: -6px 1em 0;
       text-indent: -9999px;
@@ -284,7 +307,7 @@ footer {
     text-shadow: none; }
 
 body {
-  background: url('/images/background.jpg?1351674384') repeat;
+  background: url('/images/background.jpg?1354060440') repeat;
   color: black; }
 
 div.wrap {

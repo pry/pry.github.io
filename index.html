@@ -3,12 +3,14 @@
 layout: default
 title: Pry - an IRB alternative and runtime developer console
 ---
-    
+
 <header>
+  {% include devswag.html %}
+
   <div class="fork_me ribbon">
     <a href="http://github.com/pry/pry" rel="external"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/images/clone.png" alt="Fork me on GitHub"></a>
   </div>
-  
+
   {% include logo.html %}
 
   <div class="sponsors">
@@ -68,7 +70,7 @@ title: Pry - an IRB alternative and runtime developer console
     <iframe src="http://player.vimeo.com/video/26391171?title=0&amp;byline=0&amp;portrait=0"
             width="633" height="475" frameborder="0"></iframe>
   </center>
-  
+
   <p>
     <a href="screencasts.html">Watch other screencasts</a>
   </p>
@@ -76,7 +78,7 @@ title: Pry - an IRB alternative and runtime developer console
 
 <article>
   <h1>Features</h1>
-  
+
   <p>
     Pry is written from scratch to provide a number of advanced features,
     some of these include:
@@ -116,7 +118,7 @@ title: Pry - an IRB alternative and runtime developer console
   <h1>More examples</h1>
 
   <h2>Runtime invocation</h2>
-  
+
   <p>
     Pry can be invoked in the middle of a running program. It opens a Pry
     session at the point it's called and makes all program state at that
@@ -138,7 +140,7 @@ title: Pry - an IRB alternative and runtime developer console
   {% highlight ruby %}{% include code/session.rb %}{% endhighlight %}
 
   <h2>Command Shell Integration</h2>
-  
+
   <p>
     A line of input that begins with a '.' will be forwarded to the command
     shell. This enables us to navigate the file system, spawn editors, and
@@ -162,12 +164,12 @@ title: Pry - an IRB alternative and runtime developer console
 
 <article>
   <h1>Please support Pry!</h1>
-  
+
   <p class="donate">
     If you liked Pry and found it useful, <em>please consider
     making a donation</em> to support its continued development!
   </p>
-  
+
   <p>
     Pry was a huge amount of work and every dollar received is encouraging!
   </p>
@@ -175,16 +177,16 @@ title: Pry - an IRB alternative and runtime developer console
 
 <article>
   <h1>Credits</h1>
-  
+
   <p>
     The Pry core team are <a href="https://github.com/banister">John Mair</a>
     (project founder; aka banisterfiend; <a href="https://twitter.com/banisterfiend">twitter</a>; <a href="http://banisterfiend.wordpress.com">blog</a>),
     <a href="https://github.com/conradirwin">Conrad Irwin</a> and <a href="https://github.com/rwfitzge">Ryan Fitzgerald</a>.
-    
+
     The project is also aided by a healthy number
     of <a href="https://github.com/pry/pry/contributors">contributors</a>.
   </p>
-  
+
   <p>
     To participate in Pry's development (and get your name on
     the list!) see the wiki article on <a href="https://github.com/pry/pry/wiki/Contributing">how to contribute</a>.

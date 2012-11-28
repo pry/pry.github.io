@@ -7,6 +7,16 @@
     <meta name="description" content="Pry is a powerful alternative to the standard IRB shell for Ruby." />
     <link type="text/css" rel="stylesheet" href="/stylesheets/style.css?{{ site.time | date: "%Y%m%d%H%M%S" }}" />
     <link type="text/css" rel="stylesheet" title="Sunburst" href="http://yandex.st/highlightjs/6.0/styles/sunburst.min.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function($) {
+        var $devswag = $('#devswag'),
+            $tshirt = $('#pry_t_shirt');
+
+        $devswag.mouseenter(function() { $tshirt.animate({ opacity: 1 }); });
+        $devswag.mouseleave(function() { $tshirt.animate({ opacity: 0 }); });
+      });
+    </script>
 
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
