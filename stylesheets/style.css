@@ -29,7 +29,7 @@ strong {
   font-weight: bold; }
 
 small {
-  font-size: .75em; }
+  font-size: 0.75em; }
 
 sup {
   top: -0.5em; }
@@ -68,20 +68,20 @@ ul, ol {
   padding: 0 0 0 2.5em; }
 
 h1, h2, h3 {
-  margin: .6em 0 0;
+  margin: 0.6em 0 0;
   letter-spacing: 3px;
   padding: 0; }
 
 h1 {
   border-bottom: solid 2px;
   color: #D00;
-  font: bold 2.5em 'Maven Pro', 'Arial';
+  font: bold 2.5em "Maven Pro", "Arial";
   padding-bottom: .15em;
   text-shadow: #111111 0px 1px 1px; }
 
 h2 {
   color: black;
-  font: bold 1.5em 'Maven Pro', 'Arial';
+  font: bold 1.5em "Maven Pro", "Arial";
   margin-top: 1.25em;
   text-shadow: #888888 0 1px 2px; }
 
@@ -109,9 +109,9 @@ header {
       margin-top: 22px;
       margin-left: -22px; }
       header #devswag #product_links .uniform_bg {
-        background: url('/images/white_transparent_dot.png?1354097809') repeat;
+        background: url('/images/white_transparent_dot.png?1361883994') repeat;
         position: relative;
-        outline: #fff solid 0.26em;
+        outline: white solid 0.26em;
         -moz-outline-offset: -0.04em; }
         header #devswag #product_links .uniform_bg span {
           position: relative; }
@@ -119,7 +119,7 @@ header {
         width: 0;
         height: 0;
         border-top: 5px solid rgba(255, 255, 255, 0);
-        border-right: 10px solid #fff;
+        border-right: 10px solid white;
         border-bottom: 5px solid rgba(255, 255, 255, 0);
         position: relative;
         right: 2px;
@@ -147,7 +147,7 @@ header {
     -o-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
     box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset; }
     header .sponsors h2 {
-      background: url('/images/sponsored_by_header.png?1354060440') no-repeat;
+      background: url('/images/sponsored_by_header.png?1361883994') no-repeat;
       height: 28px;
       margin: -6px 1em 0;
       text-indent: -9999px;
@@ -178,7 +178,7 @@ header {
     * html header hr {
       overflow-x: hidden; }
   header p.support {
-    font: .7em 'Verdana', sans-serif;
+    font: 0.7em "Verdana", sans-serif;
     display: inline;
     float: left;
     margin-right: 0;
@@ -227,11 +227,11 @@ nav {
       background-image: -o-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
       background-image: -ms-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
       background-image: linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
-      border: 1px solid #353C3F;
+      border: 1px solid #353c3f;
       color: white;
-      font: bold .8em 'Verdana', sans-serif;
-      margin: .4em 1em;
-      padding: .6em 1.2em;
+      font: bold 0.8em "Verdana", sans-serif;
+      margin: 0.4em 1em;
+      padding: 0.6em 1.2em;
       position: relative;
       text-decoration: none;
       -moz-box-shadow: #555555 1px 1px 5px;
@@ -264,11 +264,11 @@ nav {
       background-image: -o-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
       background-image: -ms-linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
       background-image: linear-gradient(bottom center, #1a1f24 9%, #303942 39%);
-      border: 1px solid #353C3F;
+      border: 1px solid #353c3f;
       color: #909090;
-      font: bold .8em 'Verdana', sans-serif;
-      margin: .4em 1em;
-      padding: .6em 1.2em;
+      font: bold 0.8em "Verdana", sans-serif;
+      margin: 0.4em 1em;
+      padding: 0.6em 1.2em;
       position: relative;
       -moz-box-shadow: #555555 1px 1px 5px;
       -webkit-box-shadow: #555555 1px 1px 5px;
@@ -290,7 +290,7 @@ nav {
       background-image: linear-gradient(bottom center, #a25600 9%, #ce6d00 39%);
       border-color: #AB4B11;
       cursor: pointer;
-      padding: .8em 1.4em; }
+      padding: 0.8em 1.4em; }
       nav ul li.donate .button:hover {
         color: white;
         text-shadow: white 0 0 8px; }
@@ -304,20 +304,20 @@ footer {
   margin: 0 auto;
   padding: .5em;
   text-align: center;
-  border-top: 1px solid #988;
+  border-top: 1px solid #998888;
   -moz-box-shadow: #333333 0 4px 5px -4px inset;
   -webkit-box-shadow: #333333 0 4px 5px -4px inset;
   -o-box-shadow: #333333 0 4px 5px -4px inset;
   box-shadow: #333333 0 4px 5px -4px inset;
   text-shadow: white 0 1px; }
   footer p {
-    font: .7em 'Verdana', sans-serif; }
+    font: 0.7em "Verdana", sans-serif; }
   footer a {
     color: #900;
     text-shadow: none; }
 
 body {
-  background: url('/images/background.jpg?1354060440') repeat;
+  background: url('/images/background.jpg?1361883994') repeat;
   color: black; }
 
 div.wrap {
