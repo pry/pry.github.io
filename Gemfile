@@ -1,4 +1,4 @@
-source :rubygems
+source 'http://rubygems.org'
 
 gem 'foreman'
 gem 'compass', '~> 0.11.3'
