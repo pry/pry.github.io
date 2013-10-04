@@ -8,6 +8,7 @@
 # List of directories to exclude in Jekyll
 exclude: []
 
+# Add Support to Pygments Syntax Highlighter
 pygments: true
 
 # Custom data, available through {{ site.<variable> }}
