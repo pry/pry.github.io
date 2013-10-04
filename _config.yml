@@ -8,5 +8,7 @@
 # List of directories to exclude in Jekyll
 exclude: []
 
+pygments: true
+
 # Custom data, available through {{ site.<variable> }}
 # none so far ^^
