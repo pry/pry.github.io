@@ -130,32 +130,6 @@ header {
     position: relative;
     padding: 2em 0 0;
     text-align: center; }
-  header .sponsors {
-    text-align: center;
-    background-color: #F5F6F8;
-    display: inline;
-    float: left;
-    position: relative;
-    margin: 0 -68px 1.5em 68px;
-    display: inline;
-    float: left;
-    margin-right: 0;
-    width: 602px;
-    margin-bottom: 1.5em;
-    -moz-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
-    -webkit-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
-    -o-box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset;
-    box-shadow: #d6e2e1 2px 2px 0 inset, #d6e2e1 -2px -2px 0 inset; }
-    header .sponsors h2 {
-      background: url('/images/sponsored_by_header.png?1361883994') no-repeat;
-      height: 28px;
-      margin: -6px 1em 0;
-      text-indent: -9999px;
-      width: 152px; }
-    header .sponsors a {
-      margin: 6px; }
-    * html header .sponsors {
-      overflow-x: hidden; }
   header hr {
     background: #dddddd;
     color: #dddddd;
