@@ -67,30 +67,6 @@ header
     text-align: center;
   }
 
-  .sponsors
-  {
-    text-align: center;
-    background-color: #F5F6F8;
-
-    h2
-    {
-      background: image-url('/images/sponsored_by_header.png') no-repeat;
-      height: 28px;
-      margin: -6px 1em 0;
-      text-indent: -9999px;
-      width: 152px;
-    }
-
-    a {
-      margin: 6px;
-    }
-
-    @include push(2);
-    @include column(18, true);
-    @include append-bottom(1.5em);
-    @include box-shadow(#D6E2E1 2px 2px 0 inset, #D6E2E1 -2px -2px 0 inset);
-  }
-
   hr
   {
     @include colruler;
